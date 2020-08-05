@@ -61,5 +61,13 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         {
 
         }
+
+        private void tiposDePersonasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TipoPersona tipoPersona = new TipoPersona();
+            this.Hide();
+            tipoPersona.ShowDialog();
+            this.Show();
+        }
     }
 }

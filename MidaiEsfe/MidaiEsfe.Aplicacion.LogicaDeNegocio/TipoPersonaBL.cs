@@ -10,10 +10,11 @@ namespace MidaiEsfe.Aplicacion.LogicaDeNegocio
 {
     public class TipoPersonaBL
     {
-        public static int Guardar (TipoPersona pTipoPersona)
+        public int Guardar (TipoPersona pTipoPersona)
         {
-        return TipoPersonaDAL.Guardar(pTipoPersona);
+            return TipoPersonaDAL.Guardar(pTipoPersona);
         }
+
         public static int Modificar(TipoPersona pTipoPersona)
         {
             return TipoPersonaDAL.Modificar(pTipoPersona);
