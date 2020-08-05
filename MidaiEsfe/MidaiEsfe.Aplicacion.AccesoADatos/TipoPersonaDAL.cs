@@ -12,7 +12,7 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
     {
         public static int Guardar(TipoPersona pTipoPersona)
         {
-            string consulta = "INSERT INTO TipoPersona(Nombre) values(@Nombre)";
+            string consulta = "INSERT INTO Tipo_Persona(Nombre) values(@Nombre)";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
             comando.Parameters.AddWithValue("@Nombre", pTipoPersona.Nombre);
@@ -20,7 +20,7 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
         }
         public static int Modificar(TipoPersona pTipoPersona)
         {
-            string consulta = "UPDATE TipoPersona SET Nombre= @Nombre WHERE Id=@Id";
+            string consulta = "UPDATE Tipo_Persona SET Nombre= @Nombre WHERE Id=@Id";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
             comando.Parameters.AddWithValue("@Nombre", pTipoPersona.Nombre);
@@ -29,7 +29,7 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
         }
         public static int Eliminar(TipoPersona pTipoPersona)
         {
-            string consulta = "DELETE FROM TipoPersona WHERE Id=@Id";
+            string consulta = "DELETE FROM Tipo_Persona WHERE Id=@Id";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
             comando.Parameters.AddWithValue("@Id", pTipoPersona.Id);
@@ -37,7 +37,7 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
         }
         public static List <TipoPersona> ObtenerTodos()
         {
-            String consulta = "SELECT TOP 500 t.Id, t.Nombre FROM TipoPersona t";
+            String consulta = "SELECT TOP 500 t.Id, t.Nombre FROM Tipo_Persona t";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
             SqlDataReader reader = ComunDB.EjecutarComandoReader(comando);

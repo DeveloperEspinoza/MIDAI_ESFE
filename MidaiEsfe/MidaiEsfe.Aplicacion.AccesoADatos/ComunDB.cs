@@ -10,7 +10,10 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
 {
     public class ComunDB
     {
-        const string StrConexion = @"Data Source=LAPTOP-GT13BI5B;Initial Catalog=MIDAI_ESFE;Integrated Security=True";
+        //PC KARLA
+        //const string StrConexion = @"Data Source=LAPTOP-GT13BI5B;Initial Catalog=MIDAI_ESFE;Integrated Security=True";
+        //PC LUIS
+        const string StrConexion = @"Data Source=.;Initial Catalog=MIDAI_ESFE;Integrated Security=True";
         private static SqlConnection ObtenerConexion()
         {
             SqlConnection connection = new SqlConnection(StrConexion);
