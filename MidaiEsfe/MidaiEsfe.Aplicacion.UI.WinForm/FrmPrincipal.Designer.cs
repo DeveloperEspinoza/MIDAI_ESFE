@@ -29,23 +29,15 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cerrarSeciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarTipoDePersonaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarPersonaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarModuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarAsignaciónDeModuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarEvaluaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verNotasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verModuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verAsignaciónDeModuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verEvaluacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verNotasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.notasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.miPerfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mantenimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiposDePersonasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.personasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroDeModulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.evaluacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cuadroDeNotasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
@@ -54,164 +46,109 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.archivoToolStripMenuItem,
-            this.verToolStripMenuItem,
-            this.modificarToolStripMenuItem,
-            this.eliminarToolStripMenuItem});
+            this.mantenimientosToolStripMenuItem,
+            this.miPerfilToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(653, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(538, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // archivoToolStripMenuItem
+            // miPerfilToolStripMenuItem
             // 
-            this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cerrarSeciónToolStripMenuItem,
-            this.agregarTipoDePersonaToolStripMenuItem,
-            this.agregarPersonaToolStripMenuItem,
-            this.agregarModuloToolStripMenuItem,
-            this.agregarAsignaciónDeModuloToolStripMenuItem,
-            this.agregarEvaluaciónToolStripMenuItem,
-            this.agregarToolStripMenuItem});
-            this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.archivoToolStripMenuItem.Text = "Archivo";
+            this.miPerfilToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cerrarSesiónToolStripMenuItem});
+            this.miPerfilToolStripMenuItem.Name = "miPerfilToolStripMenuItem";
+            this.miPerfilToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.miPerfilToolStripMenuItem.Text = "Mi Perfil";
             // 
-            // cerrarSeciónToolStripMenuItem
+            // cerrarSesiónToolStripMenuItem
             // 
-            this.cerrarSeciónToolStripMenuItem.Name = "cerrarSeciónToolStripMenuItem";
-            this.cerrarSeciónToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
-            this.cerrarSeciónToolStripMenuItem.Text = "Cerrar Seción";
+            this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
             // 
-            // agregarTipoDePersonaToolStripMenuItem
+            // mantenimientosToolStripMenuItem
             // 
-            this.agregarTipoDePersonaToolStripMenuItem.Name = "agregarTipoDePersonaToolStripMenuItem";
-            this.agregarTipoDePersonaToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
-            this.agregarTipoDePersonaToolStripMenuItem.Text = "Agregar Tipo de Persona.";
+            this.mantenimientosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tiposDePersonasToolStripMenuItem,
+            this.personasToolStripMenuItem,
+            this.modulosToolStripMenuItem,
+            this.registroDeModulosToolStripMenuItem,
+            this.evaluacionesToolStripMenuItem,
+            this.cuadroDeNotasToolStripMenuItem});
+            this.mantenimientosToolStripMenuItem.Name = "mantenimientosToolStripMenuItem";
+            this.mantenimientosToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
+            this.mantenimientosToolStripMenuItem.Text = "Mantenimientos";
             // 
-            // agregarPersonaToolStripMenuItem
+            // tiposDePersonasToolStripMenuItem
             // 
-            this.agregarPersonaToolStripMenuItem.Name = "agregarPersonaToolStripMenuItem";
-            this.agregarPersonaToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
-            this.agregarPersonaToolStripMenuItem.Text = "Agregar Persona.";
+            this.tiposDePersonasToolStripMenuItem.Name = "tiposDePersonasToolStripMenuItem";
+            this.tiposDePersonasToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.tiposDePersonasToolStripMenuItem.Text = "Tipos de personas";
             // 
-            // agregarModuloToolStripMenuItem
+            // personasToolStripMenuItem
             // 
-            this.agregarModuloToolStripMenuItem.Name = "agregarModuloToolStripMenuItem";
-            this.agregarModuloToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
-            this.agregarModuloToolStripMenuItem.Text = "Agregar Modulo.";
+            this.personasToolStripMenuItem.Name = "personasToolStripMenuItem";
+            this.personasToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.personasToolStripMenuItem.Text = "Personas";
             // 
-            // agregarAsignaciónDeModuloToolStripMenuItem
+            // modulosToolStripMenuItem
             // 
-            this.agregarAsignaciónDeModuloToolStripMenuItem.Name = "agregarAsignaciónDeModuloToolStripMenuItem";
-            this.agregarAsignaciónDeModuloToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
-            this.agregarAsignaciónDeModuloToolStripMenuItem.Text = "Agregar Asignación de Modulo.";
+            this.modulosToolStripMenuItem.Name = "modulosToolStripMenuItem";
+            this.modulosToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.modulosToolStripMenuItem.Text = "Modulos";
             // 
-            // agregarEvaluaciónToolStripMenuItem
+            // registroDeModulosToolStripMenuItem
             // 
-            this.agregarEvaluaciónToolStripMenuItem.Name = "agregarEvaluaciónToolStripMenuItem";
-            this.agregarEvaluaciónToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
-            this.agregarEvaluaciónToolStripMenuItem.Text = "Agregar Evaluaciones.";
+            this.registroDeModulosToolStripMenuItem.Name = "registroDeModulosToolStripMenuItem";
+            this.registroDeModulosToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.registroDeModulosToolStripMenuItem.Text = "Modulos y Estudiantes";
             // 
-            // agregarToolStripMenuItem
+            // evaluacionesToolStripMenuItem
             // 
-            this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
-            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
-            this.agregarToolStripMenuItem.Text = "Agregar Notas.";
-            this.agregarToolStripMenuItem.Click += new System.EventHandler(this.agregarToolStripMenuItem_Click);
+            this.evaluacionesToolStripMenuItem.Name = "evaluacionesToolStripMenuItem";
+            this.evaluacionesToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.evaluacionesToolStripMenuItem.Text = "Evaluaciones";
             // 
-            // verToolStripMenuItem
+            // cuadroDeNotasToolStripMenuItem
             // 
-            this.verToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.verNotasToolStripMenuItem,
-            this.verModuloToolStripMenuItem,
-            this.verAsignaciónDeModuloToolStripMenuItem,
-            this.verEvaluacionesToolStripMenuItem,
-            this.verNotasToolStripMenuItem1});
-            this.verToolStripMenuItem.Name = "verToolStripMenuItem";
-            this.verToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
-            this.verToolStripMenuItem.Text = "Ver";
-            this.verToolStripMenuItem.Click += new System.EventHandler(this.verToolStripMenuItem_Click);
-            // 
-            // verNotasToolStripMenuItem
-            // 
-            this.verNotasToolStripMenuItem.Name = "verNotasToolStripMenuItem";
-            this.verNotasToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.verNotasToolStripMenuItem.Text = "Persona.";
-            this.verNotasToolStripMenuItem.Click += new System.EventHandler(this.verNotasToolStripMenuItem_Click);
-            // 
-            // verModuloToolStripMenuItem
-            // 
-            this.verModuloToolStripMenuItem.Name = "verModuloToolStripMenuItem";
-            this.verModuloToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.verModuloToolStripMenuItem.Text = "Modulo.";
-            // 
-            // verAsignaciónDeModuloToolStripMenuItem
-            // 
-            this.verAsignaciónDeModuloToolStripMenuItem.Name = "verAsignaciónDeModuloToolStripMenuItem";
-            this.verAsignaciónDeModuloToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.verAsignaciónDeModuloToolStripMenuItem.Text = "Asignación de Modulo.";
-            // 
-            // verEvaluacionesToolStripMenuItem
-            // 
-            this.verEvaluacionesToolStripMenuItem.Name = "verEvaluacionesToolStripMenuItem";
-            this.verEvaluacionesToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.verEvaluacionesToolStripMenuItem.Text = "Evaluaciones.";
-            // 
-            // verNotasToolStripMenuItem1
-            // 
-            this.verNotasToolStripMenuItem1.Name = "verNotasToolStripMenuItem1";
-            this.verNotasToolStripMenuItem1.Size = new System.Drawing.Size(197, 22);
-            this.verNotasToolStripMenuItem1.Text = "Notas.";
-            // 
-            // modificarToolStripMenuItem
-            // 
-            this.modificarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.notasToolStripMenuItem});
-            this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
-            this.modificarToolStripMenuItem.Text = "Modificar";
-            // 
-            // notasToolStripMenuItem
-            // 
-            this.notasToolStripMenuItem.Name = "notasToolStripMenuItem";
-            this.notasToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
-            this.notasToolStripMenuItem.Text = "Notas";
-            // 
-            // eliminarToolStripMenuItem
-            // 
-            this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
-            this.eliminarToolStripMenuItem.Text = "Eliminar";
+            this.cuadroDeNotasToolStripMenuItem.Name = "cuadroDeNotasToolStripMenuItem";
+            this.cuadroDeNotasToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.cuadroDeNotasToolStripMenuItem.Text = "Cuadro de Notas";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label1.Location = new System.Drawing.Point(214, 46);
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(67)))), ((int)(((byte)(133)))));
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Light", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label1.Location = new System.Drawing.Point(0, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(270, 66);
+            this.label1.Size = new System.Drawing.Size(538, 75);
             this.label1.TabIndex = 1;
-            this.label1.Text = "BIENVENIDOS A \r\nMIDAI ESFE";
+            this.label1.Text = "Bienvenidos a MIDAI ESFE";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label2.Location = new System.Drawing.Point(124, 346);
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(67)))), ((int)(((byte)(133)))));
+            this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Light", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label2.Location = new System.Drawing.Point(0, 299);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(438, 33);
+            this.label2.Size = new System.Drawing.Size(538, 47);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Aplicación de control de notas.";
+            this.label2.Text = "Aplicacion de control de notas";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(653, 418);
+            this.ClientSize = new System.Drawing.Size(538, 346);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
@@ -229,24 +166,16 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cerrarSeciónToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agregarTipoDePersonaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agregarPersonaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agregarModuloToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agregarAsignaciónDeModuloToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agregarEvaluaciónToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agregarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem verToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mantenimientosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tiposDePersonasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem personasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modulosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registroDeModulosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem evaluacionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cuadroDeNotasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem miPerfilToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cerrarSesiónToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ToolStripMenuItem verNotasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem verModuloToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem verAsignaciónDeModuloToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem verEvaluacionesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem verNotasToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem notasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
     }
 }
