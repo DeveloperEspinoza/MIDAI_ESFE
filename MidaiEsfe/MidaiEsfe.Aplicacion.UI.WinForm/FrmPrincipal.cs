@@ -69,5 +69,26 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             tipoPersona.ShowDialog();
             this.Show();
         }
+
+        private void personasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Nueva_Persona Nueva_Persona = new Nueva_Persona();
+            this.Hide();
+            Nueva_Persona.ShowDialog();
+            this.Show();
+        }
+
+        private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void modulosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Modulo Modulo = new Modulo();
+            this.Hide();
+            Modulo.ShowDialog();
+            this.Show();
+        }
     }
 }

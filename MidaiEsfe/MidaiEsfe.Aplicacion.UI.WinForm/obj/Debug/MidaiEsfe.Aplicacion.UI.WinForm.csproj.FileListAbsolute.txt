@@ -45,3 +45,9 @@ C:\Users\Luise\Developers\git\.net\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.
 C:\Users\Luise\Developers\git\.net\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinForm\obj\Debug\MidaiEsfe.Aplicacion.UI.WinForm.csproj.GenerateResource.Cache
 C:\Users\Luise\Developers\git\.net\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinForm\obj\Debug\MidaiEsfe.Aplicacion.UI.WinForm.TipoPersona.resources
 C:\Users\Luise\Developers\git\.net\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinForm\obj\Debug\MidaiEsfe.Aplicacion.UI.WinForm.TipoPersonaAgregar.resources
+C:\Users\Karla\Developers\GIT\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinForm\obj\Debug\MidaiEsfe.Aplicacion.UI.WinForm.TipoPersona.resources
+C:\Users\Karla\Developers\GIT\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinForm\obj\Debug\MidaiEsfe.Aplicacion.UI.WinForm.TipoPersonaAgregar.resources
+C:\Users\Karla\Developers\GIT\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinForm\obj\Debug\MidaiEsfe.Aplicacion.UI.WinForm.Persona.resources
+C:\Users\Karla\Developers\GIT\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinForm\obj\Debug\MidaiEsfe.Aplicacion.UI.WinForm.Nueva_Persona.resources
+C:\Users\Karla\Developers\GIT\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinForm\obj\Debug\MidaiEsfe.Aplicacion.UI.WinForm.Modulo.resources
+C:\Users\Karla\Developers\GIT\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinForm\obj\Debug\MidaiEsfe.Aplicacion.UI.WinForm.Nuevo_Modulo.resources

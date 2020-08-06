@@ -10,7 +10,7 @@ namespace MidaiEsfe.Aplicacion.LogicaDeNegocio
 {
     public class PersonaBL
     {
-        public static int Guardar(Persona pPersona)
+        public int Guardar(Persona pPersona)
         {
             return PersonaDAL.Guardar(pPersona);
         }

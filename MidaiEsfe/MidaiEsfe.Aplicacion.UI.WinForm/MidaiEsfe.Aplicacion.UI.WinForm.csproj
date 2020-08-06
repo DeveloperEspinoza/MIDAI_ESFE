@@ -52,6 +52,30 @@
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo.Designer.cs">
+      <DependentUpon>Modulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nueva Persona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nueva Persona.Designer.cs">
+      <DependentUpon>Nueva Persona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nuevo Modulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nuevo Modulo.Designer.cs">
+      <DependentUpon>Nuevo Modulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Persona.Designer.cs">
+      <DependentUpon>Persona.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TipoPersona.cs">
@@ -68,6 +92,18 @@
     </Compile>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo.resx">
+      <DependentUpon>Modulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nueva Persona.resx">
+      <DependentUpon>Nueva Persona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nuevo Modulo.resx">
+      <DependentUpon>Nuevo Modulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persona.resx">
+      <DependentUpon>Persona.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
