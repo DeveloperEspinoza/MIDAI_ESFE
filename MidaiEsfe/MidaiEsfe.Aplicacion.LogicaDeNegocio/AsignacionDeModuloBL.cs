@@ -10,7 +10,7 @@ namespace MidaiEsfe.Aplicacion.LogicaDeNegocio
 {
     public class AsignacionDeModuloBL
     {
-        public static int Guardar(AsignacionDeModulo pAsignacionDeModulo)
+        public int Guardar(AsignacionDeModulo pAsignacionDeModulo)
         {
             return AsignacionDeModuloDAL.Guardar(pAsignacionDeModulo);
         }

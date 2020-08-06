@@ -33,7 +33,9 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             if (resultadoDeMetodo == 1)
             {
                 MessageBox.Show("EL registro fue guardado con exito");
+                txtIdTipoPersona.Text = "";
                 txtNombres.Text = "";
+                txtApellidos.Text = "";
             }
             else
             {

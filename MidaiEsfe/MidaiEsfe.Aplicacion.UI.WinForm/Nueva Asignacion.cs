@@ -10,26 +10,23 @@ using System.Windows.Forms;
 
 namespace MidaiEsfe.Aplicacion.UI.WinForm
 {
-    public partial class Nuevo_Modulo : Form
+    public partial class Nueva_Asignacion : Form
     {
-        public Nuevo_Modulo()
+        public Nueva_Asignacion()
         {
             InitializeComponent();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             //MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona _en = new MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona();
-            EntidadesDeNegocio.Modulo _entidad = new EntidadesDeNegocio.Modulo();
+            EntidadesDeNegocio.AsignacionDeModulo _entidad = new EntidadesDeNegocio.AsignacionDeModulo();
             //solo para modificar o eliminar
             _entidad.IdPersona = byte.Parse(txtIdPersona.Text);
-            _entidad.Nombre = txtNombre.Text;
-            LogicaDeNegocio.ModuloBL _logica = new LogicaDeNegocio.ModuloBl();
+            _entidad.IdModulo = byte.Parse(txtIdModulo.Text);
+            _entidad.FechaRegistro = DateTime.Parse(txtFecha.Text);
+
+            LogicaDeNegocio.AsignacionDeModuloBL _logica = new LogicaDeNegocio.AsignacionDeModuloBL();
 
             int resultadoDeMetodo = _logica.Guardar(_entidad);
 
@@ -37,7 +34,8 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             {
                 MessageBox.Show("EL registro fue agregado con exito");
                 txtIdPersona.Text = "";
-                txtNombre.Text = "";
+                txtIdModulo.Text = "";
+                txtFecha.Text = "";
             }
             else
             {

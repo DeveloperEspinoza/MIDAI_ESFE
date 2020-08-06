@@ -90,5 +90,18 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             Modulo.ShowDialog();
             this.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void registroDeModulosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Modulo_y_Estudiante Modulo_y_Estudiante = new Modulo_y_Estudiante();
+            this.Hide();
+            Modulo_y_Estudiante.ShowDialog();
+            this.Show();
+        }
     }
 }

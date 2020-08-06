@@ -96,6 +96,7 @@
             this.registroDeModulosToolStripMenuItem.Name = "registroDeModulosToolStripMenuItem";
             this.registroDeModulosToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
             this.registroDeModulosToolStripMenuItem.Text = "Modulos y Estudiantes";
+            this.registroDeModulosToolStripMenuItem.Click += new System.EventHandler(this.registroDeModulosToolStripMenuItem_Click);
             // 
             // evaluacionesToolStripMenuItem
             // 
@@ -120,7 +121,7 @@
             // cerrarSesiónToolStripMenuItem
             // 
             this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
             this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
             // 
@@ -155,12 +156,13 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(145, 102);
+            this.pictureBox1.Location = new System.Drawing.Point(123, 102);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(265, 194);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // FrmPrincipal
             // 
