@@ -10,35 +10,32 @@ using System.Windows.Forms;
 
 namespace MidaiEsfe.Aplicacion.UI.WinForm
 {
-    public partial class Nuevo_Modulo : Form
+    public partial class Nueva_Nota : Form
     {
-        public Nuevo_Modulo()
+        public Nueva_Nota()
         {
             InitializeComponent();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             //MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona _en = new MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona();
-            EntidadesDeNegocio.Modulo _entidad = new EntidadesDeNegocio.Modulo();
+            EntidadesDeNegocio.Notas _entidad = new EntidadesDeNegocio.Notas();
             //solo para modificar o eliminar
-            _entidad.IdPersona = byte.Parse(txtIdPersona.Text);
-            _entidad.Nombre = txtNombre.Text;
+            _entidad.IdEvaluacion = byte.Parse(txtIdEvaluaciones.Text);
+            _entidad.IdAsignacionDeModulo = byte.Parse(txtIdModuloyEstudiante.Text);
+            _entidad.Nota = byte.Parse(txtNota.Text);
 
-            LogicaDeNegocio.ModuloBL _logica = new LogicaDeNegocio.ModuloBL();
+            LogicaDeNegocio.NotasBL _logica = new LogicaDeNegocio.NotasBL();
 
             int resultadoDeMetodo = _logica.Guardar(_entidad);
 
             if (resultadoDeMetodo == 1)
             {
                 MessageBox.Show("EL registro fue agregado con exito");
-                txtIdPersona.Text = "";
-                txtNombre.Text = "";
+                txtIdEvaluaciones.Text = "";
+                txtIdModuloyEstudiante.Text = "";
+                txtNota.Text = "";
             }
             else
             {
@@ -51,7 +48,12 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             this.Close();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }

@@ -10,7 +10,7 @@ namespace MidaiEsfe.Aplicacion.LogicaDeNegocio
 {
      public class NotasBL
     {
-        public static int Guardar(Notas pNotas)
+        public int Guardar(Notas pNotas)
         {
             return NotasDAL.Guardar(pNotas);
         }

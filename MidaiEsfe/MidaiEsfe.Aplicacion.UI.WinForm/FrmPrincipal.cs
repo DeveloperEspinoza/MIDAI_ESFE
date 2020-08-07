@@ -103,5 +103,29 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             Modulo_y_Estudiante.ShowDialog();
             this.Show();
         }
+
+        private void evaluacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Evaluaciones Evaluaciones = new Evaluaciones();
+            this.Hide();
+            Evaluaciones.ShowDialog();
+            this.Show();
+        }
+
+        private void cuadroDeNotasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Notas Notas = new Notas();
+            this.Hide();
+            Notas.ShowDialog();
+            this.Show();
+        }
+
+        private void cuadroDeNotasToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Notas Notas = new Notas();
+            this.Hide();
+            Notas.ShowDialog();
+            this.Show();
+        }
     }
 }

@@ -34,13 +34,15 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(21, 33);
+            this.button1.Location = new System.Drawing.Point(21, 50);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 27);
             this.button1.TabIndex = 0;
@@ -56,7 +58,7 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(21, 66);
+            this.dataGridView1.Location = new System.Drawing.Point(21, 86);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(484, 205);
             this.dataGridView1.TabIndex = 1;
@@ -81,14 +83,43 @@
             this.Column4.HeaderText = "Apellidos";
             this.Column4.Name = "Column4";
             // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(67)))), ((int)(((byte)(133)))));
+            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Light", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label4.Location = new System.Drawing.Point(0, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(518, 47);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Personas";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(67)))), ((int)(((byte)(133)))));
+            this.label6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Light", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label6.Location = new System.Drawing.Point(0, 306);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(518, 47);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Aplicacion de control de notas";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Nueva_Persona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(517, 303);
+            this.ClientSize = new System.Drawing.Size(518, 353);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Name = "Nueva_Persona";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nueva_Persona";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -103,5 +134,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
     }
 }

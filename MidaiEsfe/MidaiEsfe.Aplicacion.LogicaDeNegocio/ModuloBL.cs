@@ -8,7 +8,7 @@ using MidaiEsfe.Aplicacion.EntidadesDeNegocio;
 
 namespace MidaiEsfe.Aplicacion.LogicaDeNegocio
 {
-    class ModuloBL
+    public class ModuloBL
     {
         public int  Guardar(Modulo pModulo)
         {

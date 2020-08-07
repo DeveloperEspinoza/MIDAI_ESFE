@@ -10,35 +10,32 @@ using System.Windows.Forms;
 
 namespace MidaiEsfe.Aplicacion.UI.WinForm
 {
-    public partial class Nuevo_Modulo : Form
+    public partial class Nueva_Evaluacion : Form
     {
-        public Nuevo_Modulo()
+        public Nueva_Evaluacion()
         {
             InitializeComponent();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             //MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona _en = new MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona();
-            EntidadesDeNegocio.Modulo _entidad = new EntidadesDeNegocio.Modulo();
+            EntidadesDeNegocio.Evaluaciones _entidad = new EntidadesDeNegocio.Evaluaciones();
             //solo para modificar o eliminar
-            _entidad.IdPersona = byte.Parse(txtIdPersona.Text);
-            _entidad.Nombre = txtNombre.Text;
+            _entidad.IdModulo = byte.Parse(txtIdModulo.Text);
+            _entidad.FechaRegistro = DateTime.Parse(txtFecha.Text);
+            _entidad.Detalle = txtDetalle.Text;
 
-            LogicaDeNegocio.ModuloBL _logica = new LogicaDeNegocio.ModuloBL();
+            LogicaDeNegocio.EvaluacionesBL _logica = new LogicaDeNegocio.EvaluacionesBL();
 
             int resultadoDeMetodo = _logica.Guardar(_entidad);
 
             if (resultadoDeMetodo == 1)
             {
                 MessageBox.Show("EL registro fue agregado con exito");
-                txtIdPersona.Text = "";
-                txtNombre.Text = "";
+                txtIdModulo.Text = "";
+                txtFecha.Text = "";
+                txtDetalle.Text = "";
             }
             else
             {
@@ -51,7 +48,7 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             this.Close();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

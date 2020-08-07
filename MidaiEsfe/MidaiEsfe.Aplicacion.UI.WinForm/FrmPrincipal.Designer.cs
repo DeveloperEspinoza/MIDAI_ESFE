@@ -103,12 +103,14 @@
             this.evaluacionesToolStripMenuItem.Name = "evaluacionesToolStripMenuItem";
             this.evaluacionesToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
             this.evaluacionesToolStripMenuItem.Text = "Evaluaciones";
+            this.evaluacionesToolStripMenuItem.Click += new System.EventHandler(this.evaluacionesToolStripMenuItem_Click);
             // 
             // cuadroDeNotasToolStripMenuItem
             // 
             this.cuadroDeNotasToolStripMenuItem.Name = "cuadroDeNotasToolStripMenuItem";
             this.cuadroDeNotasToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
             this.cuadroDeNotasToolStripMenuItem.Text = "Cuadro de Notas";
+            this.cuadroDeNotasToolStripMenuItem.Click += new System.EventHandler(this.cuadroDeNotasToolStripMenuItem_Click_1);
             // 
             // miPerfilToolStripMenuItem
             // 
@@ -154,12 +156,14 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(123, 102);
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(227, 137);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(265, 194);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.Size = new System.Drawing.Size(79, 56);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -168,6 +172,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(538, 346);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);

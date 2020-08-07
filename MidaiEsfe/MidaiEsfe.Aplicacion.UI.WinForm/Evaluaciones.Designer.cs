@@ -1,6 +1,6 @@
 ﻿namespace MidaiEsfe.Aplicacion.UI.WinForm
 {
-    partial class Modulo
+    partial class Evaluaciones
     {
         /// <summary>
         /// Required designer variable.
@@ -28,26 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnNuevo = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnNuevo
+            // button1
             // 
-            this.btnNuevo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.Location = new System.Drawing.Point(12, 59);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
-            this.btnNuevo.TabIndex = 0;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            this.btnNuevo.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(15, 52);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Nuevo";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -55,10 +56,11 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
-            this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 88);
+            this.Column3,
+            this.Column4});
+            this.dataGridView1.Location = new System.Drawing.Point(12, 81);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(435, 183);
+            this.dataGridView1.Size = new System.Drawing.Size(481, 157);
             this.dataGridView1.TabIndex = 1;
             // 
             // Column1
@@ -68,13 +70,18 @@
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "Id Persona";
+            this.Column2.HeaderText = "Id Modulo";
             this.Column2.Name = "Column2";
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "Nombre";
+            this.Column3.HeaderText = "Fecha Registro";
             this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Detalle";
+            this.Column4.Name = "Column4";
             // 
             // label4
             // 
@@ -84,9 +91,9 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(472, 47);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Modulo";
+            this.label4.Size = new System.Drawing.Size(518, 47);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Evaluaciones";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
@@ -95,25 +102,25 @@
             this.label6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label6.Font = new System.Drawing.Font("Segoe UI Light", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label6.Location = new System.Drawing.Point(0, 281);
+            this.label6.Location = new System.Drawing.Point(0, 263);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(472, 47);
-            this.label6.TabIndex = 17;
+            this.label6.Size = new System.Drawing.Size(518, 47);
+            this.label6.TabIndex = 19;
             this.label6.Text = "Aplicacion de control de notas";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Modulo
+            // Evaluaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(472, 328);
+            this.ClientSize = new System.Drawing.Size(518, 310);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnNuevo);
-            this.Name = "Modulo";
+            this.Controls.Add(this.button1);
+            this.Name = "Evaluaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Modulo";
+            this.Text = "Evaluaciones";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -121,11 +128,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
     }

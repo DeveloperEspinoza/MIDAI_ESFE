@@ -113,6 +113,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Name = "TipoPersona";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TipoPersona";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
