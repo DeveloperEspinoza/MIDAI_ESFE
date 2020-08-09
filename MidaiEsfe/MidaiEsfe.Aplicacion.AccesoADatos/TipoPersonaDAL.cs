@@ -45,7 +45,7 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
             while (reader.Read())
             {
                 TipoPersona TipoPersona = new TipoPersona();
-                TipoPersona.Id = reader.GetByte(0);
+                TipoPersona.Id = reader.GetInt64(0);
                 TipoPersona.Nombre = reader.GetString(1);
                 listaTipoPersona.Add(TipoPersona);
             }
@@ -61,7 +61,7 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
             TipoPersona TipoPersona = new TipoPersona();
             while (reader.Read())
             {
-                TipoPersona.Id = reader.GetByte(0);
+                TipoPersona.Id = reader.GetInt64(0);
                 TipoPersona.Nombre = reader.GetString(1);
             }
             return TipoPersona;
