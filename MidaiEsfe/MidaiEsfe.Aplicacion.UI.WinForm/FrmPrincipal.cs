@@ -72,7 +72,7 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
 
         private void personasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Nueva_Persona Nueva_Persona = new Nueva_Persona();
+            Persona Nueva_Persona = new Persona();
             this.Hide();
             Nueva_Persona.ShowDialog();
             this.Show();

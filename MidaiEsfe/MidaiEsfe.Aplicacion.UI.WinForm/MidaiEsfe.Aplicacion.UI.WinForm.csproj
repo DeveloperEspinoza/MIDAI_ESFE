@@ -94,11 +94,11 @@
     <Compile Include="Nueva Nota.Designer.cs">
       <DependentUpon>Nueva Nota.cs</DependentUpon>
     </Compile>
-    <Compile Include="Nueva Persona.cs">
+    <Compile Include="Persona.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Nueva Persona.Designer.cs">
-      <DependentUpon>Nueva Persona.cs</DependentUpon>
+    <Compile Include="Persona.Designer.cs">
+      <DependentUpon>Persona.cs</DependentUpon>
     </Compile>
     <Compile Include="Nuevo Modulo.cs">
       <SubType>Form</SubType>
@@ -106,11 +106,11 @@
     <Compile Include="Nuevo Modulo.Designer.cs">
       <DependentUpon>Nuevo Modulo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Persona.cs">
+    <Compile Include="PersonaAgregar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Persona.Designer.cs">
-      <DependentUpon>Persona.cs</DependentUpon>
+    <Compile Include="PersonaAgregar.Designer.cs">
+      <DependentUpon>PersonaAgregar.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -150,14 +150,14 @@
     <EmbeddedResource Include="Nueva Nota.resx">
       <DependentUpon>Nueva Nota.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Nueva Persona.resx">
-      <DependentUpon>Nueva Persona.cs</DependentUpon>
+    <EmbeddedResource Include="Persona.resx">
+      <DependentUpon>Persona.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nuevo Modulo.resx">
       <DependentUpon>Nuevo Modulo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Persona.resx">
-      <DependentUpon>Persona.cs</DependentUpon>
+    <EmbeddedResource Include="PersonaAgregar.resx">
+      <DependentUpon>PersonaAgregar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

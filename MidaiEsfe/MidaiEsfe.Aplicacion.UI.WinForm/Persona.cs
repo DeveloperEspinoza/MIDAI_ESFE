@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MidaiEsfe.Aplicacion.EntidadesDeNegocio;
+using MidaiEsfe.Aplicacion.LogicaDeNegocio;
 
 namespace MidaiEsfe.Aplicacion.UI.WinForm
 {
@@ -19,44 +21,28 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona _en = new MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona();
-            EntidadesDeNegocio.Persona _entidad = new EntidadesDeNegocio.Persona();
-            //solo para modificar o eliminar
-            _entidad.IdTipoPersona = byte.Parse(txtIdTipoPersona.Text);
-            _entidad.Nombres = txtNombres.Text;
-            _entidad.Apellidos = txtApellidos.Text;
-
-            LogicaDeNegocio.PersonaBL _logica = new LogicaDeNegocio.PersonaBL();
-
-            int resultadoDeMetodo = _logica.Guardar(_entidad);
-
-            if (resultadoDeMetodo == 1)
-            {
-                MessageBox.Show("EL registro fue guardado con exito");
-                txtIdTipoPersona.Text = "";
-                txtNombres.Text = "";
-                txtApellidos.Text = "";
-            }
-            else
-            {
-                MessageBox.Show("EL registro no fue guardado");
-            }
+            PersonaAgregar Persona = new PersonaAgregar();
+            this.Hide();
+            Persona.ShowDialog();
+            this.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
+     
 
+        private void Persona_Load(object sender, EventArgs e)
+        {
+            MidaiEsfe.Aplicacion.LogicaDeNegocio.PersonaBL _bl = new MidaiEsfe.Aplicacion.LogicaDeNegocio.PersonaBL();
+            List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Persona> lista = new List<EntidadesDeNegocio.Persona>();
+            lista = _bl.ObtenerTodos();
+            dataGridView1.DataSource = lista;
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void Persona_Activated(object sender, EventArgs e)
         {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
+            MidaiEsfe.Aplicacion.LogicaDeNegocio.PersonaBL _bl = new MidaiEsfe.Aplicacion.LogicaDeNegocio.PersonaBL();
+            List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Persona> lista = new List<EntidadesDeNegocio.Persona>();
+            lista = _bl.ObtenerTodos();
+            dataGridView1.DataSource = lista;
         }
     }
 }

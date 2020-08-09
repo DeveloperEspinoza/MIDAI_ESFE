@@ -12,7 +12,7 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
     {
         public static int Guardar(Persona pPersona)
         {
-            string consulta = "INSERT INTO Persona(IdTipoPersona, Nombres, Apellidos) values(@IdTipoPersona, @Nombres, @Apellidos)";
+            string consulta = "INSERT INTO Persona(Id_Tipo_Persona, Nombres, Apellidos) values(@IdTipoPersona, @Nombres, @Apellidos)";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
             comando.Parameters.AddWithValue("@IdTipoPersona", pPersona.IdTipoPersona);
@@ -43,7 +43,7 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
         }
         public static List<Persona> ObtenerTodos()
         {
-            String consulta = "SELECT TOP 500 p.Id, p.IdTipoPersona, p.Nombres, pApellidos FROM Persona p";
+            String consulta = "SELECT TOP 500 p.Id, p.Id_Tipo_Persona, p.Nombres, p.Apellidos, tp.NOMBRE as TipoPersona FROM Persona p join TIPO_PERSONA tp on tp.ID=p.ID_TIPO_PERSONA;";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
             SqlDataReader reader = ComunDB.EjecutarComandoReader(comando);
@@ -51,10 +51,11 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
             while (reader.Read())
             {
                 Persona Persona = new Persona();
-                Persona.Id = reader.GetByte(0);
-                Persona.IdTipoPersona = reader.GetByte(1);
+                Persona.Id = reader.GetInt64(0);
+                Persona.IdTipoPersona = reader.GetInt64(1);
                 Persona.Nombres = reader.GetString(2);
                 Persona.Apellidos = reader.GetString(3);
+                Persona.NombreTipoPersona = reader.GetString(4);
                 listaPersona.Add(Persona);
             }
             return listaPersona;
