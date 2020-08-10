@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MidaiEsfe.Aplicacion.EntidadesDeNegocio;
+using MidaiEsfe.Aplicacion.LogicaDeNegocio;
 
 namespace MidaiEsfe.Aplicacion.UI.WinForm
 {
@@ -19,10 +21,20 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Nuevo_Modulo Nuevo_Modulo = new Nuevo_Modulo();
+            ModuloAgregar Nuevo_Modulo = new ModuloAgregar();
             this.Hide();
             Nuevo_Modulo.ShowDialog();
             this.Show();
         }
+
+        private void Modulo_Load(object sender, EventArgs e)
+        {
+            MidaiEsfe.Aplicacion.LogicaDeNegocio.ModuloBL _bl = new MidaiEsfe.Aplicacion.LogicaDeNegocio.ModuloBL();
+            List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Modulo> lista = new List<EntidadesDeNegocio.Modulo>();
+            lista = _bl.ObtenerTodos();
+            dataGridView1.DataSource = lista;
+        }
+       
+
     }
 }

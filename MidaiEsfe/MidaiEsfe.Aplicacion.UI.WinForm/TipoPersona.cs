@@ -52,5 +52,10 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             lista = _bl.ObtenerTodos();
             dataGridView1.DataSource = lista;
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

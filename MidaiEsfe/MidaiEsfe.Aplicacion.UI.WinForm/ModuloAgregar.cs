@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MidaiEsfe.Aplicacion.UI.WinForm
 {
-    public partial class Nuevo_Modulo : Form
+    public partial class ModuloAgregar : Form
     {
-        public Nuevo_Modulo()
+        public ModuloAgregar()
         {
             InitializeComponent();
         }

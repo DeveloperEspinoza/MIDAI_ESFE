@@ -100,11 +100,11 @@
     <Compile Include="Persona.Designer.cs">
       <DependentUpon>Persona.cs</DependentUpon>
     </Compile>
-    <Compile Include="Nuevo Modulo.cs">
+    <Compile Include="ModuloAgregar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Nuevo Modulo.Designer.cs">
-      <DependentUpon>Nuevo Modulo.cs</DependentUpon>
+    <Compile Include="ModuloAgregar.Designer.cs">
+      <DependentUpon>ModuloAgregar.cs</DependentUpon>
     </Compile>
     <Compile Include="PersonaAgregar.cs">
       <SubType>Form</SubType>
@@ -153,8 +153,8 @@
     <EmbeddedResource Include="Persona.resx">
       <DependentUpon>Persona.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Nuevo Modulo.resx">
-      <DependentUpon>Nuevo Modulo.cs</DependentUpon>
+    <EmbeddedResource Include="ModuloAgregar.resx">
+      <DependentUpon>ModuloAgregar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonaAgregar.resx">
       <DependentUpon>PersonaAgregar.cs</DependentUpon>

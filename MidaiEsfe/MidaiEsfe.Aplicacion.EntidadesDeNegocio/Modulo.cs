@@ -8,9 +8,9 @@ namespace MidaiEsfe.Aplicacion.EntidadesDeNegocio
 {
     public class Modulo
     {
-        public byte Id { get; set; }
+        public Int64 Id { get; set; }
 
-        public byte IdPersona { get; set; }
+        public Int64 IdPersona { get; set; }
 
         public String Nombre { get; set; }
     }

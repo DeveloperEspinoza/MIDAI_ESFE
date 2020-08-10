@@ -12,17 +12,17 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
     {
         public static int Guardar(Modulo pModulo)
         {
-            string consulta = "INSERT INTO Modulo(IdPersona, Nombre) values(@IdPersona, @Nombres)";
+            string consulta = "INSERT INTO Modulo(Id_Persona, Nombre) values(@IdPersona, @Nombres)";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
             comando.Parameters.AddWithValue("@IdPersona", pModulo.IdPersona);
-            comando.Parameters.AddWithValue("@Nombre", pModulo.Nombre);
+            comando.Parameters.AddWithValue("@Nombres", pModulo.Nombre);
 
             return ComunDB.EjecutarComando(comando);
         }
         public static int Modificar(Modulo pModulo)
         {
-            string consulta = "UPDATE Modulo SET IdPersona=@IdPersona, Nombre=@Nombre WHERE Id=@Id";
+            string consulta = "UPDATE Modulo SET Id_Persona=@IdPersona, Nombre=@Nombre WHERE Id=@Id";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
             comando.Parameters.AddWithValue("@IdPersona", pModulo.IdPersona);
@@ -40,7 +40,7 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
         }
         public static List<Modulo> ObtenerTodos()
         {
-            String consulta = "SELECT TOP 500 m.Id, m.IdPersona, m.Nombre FROM Modulo m";
+            String consulta = "SELECT TOP 500 m.Id, m.ID_PERSONA, m.Nombre FROM Modulo m";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
             SqlDataReader reader = ComunDB.EjecutarComandoReader(comando);
@@ -48,8 +48,8 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
             while (reader.Read())
             {
                 Modulo Modulo = new Modulo();
-                Modulo.Id = reader.GetByte(0);
-                Modulo.IdPersona = reader.GetByte(1);
+                Modulo.Id = reader.GetInt64(0);
+                Modulo.IdPersona = reader.GetInt64(1);
                 Modulo.Nombre = reader.GetString(2);
                 listaModulo.Add(Modulo);
             }
@@ -65,8 +65,8 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
             Modulo Modulo = new Modulo();
             while (reader.Read())
             {
-                Modulo.Id = reader.GetByte(0);
-                Modulo.IdPersona = reader.GetByte(1);
+                Modulo.Id = reader.GetInt64(0);
+                Modulo.IdPersona = reader.GetInt64(1);
                 Modulo.Nombre = reader.GetString(2);
             }
             return Modulo;

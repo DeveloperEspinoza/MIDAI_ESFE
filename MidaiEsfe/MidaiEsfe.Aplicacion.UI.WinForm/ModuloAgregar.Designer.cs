@@ -1,6 +1,6 @@
 ﻿namespace MidaiEsfe.Aplicacion.UI.WinForm
 {
-    partial class Nuevo_Modulo
+    partial class ModuloAgregar
     {
         /// <summary>
         /// Required designer variable.
