@@ -92,6 +92,7 @@
             this.Name = "Modulo_y_Estudiante";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modulo_y_Estudiante";
+            this.Activated += new System.EventHandler(this.Modulo_y_Estudiante_Activated);
             this.Load += new System.EventHandler(this.Modulo_y_Estudiante_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
