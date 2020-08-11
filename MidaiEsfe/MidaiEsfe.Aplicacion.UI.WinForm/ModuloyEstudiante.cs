@@ -34,5 +34,13 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             lista = _bl.ObtenerTodos();
             dataGridView1.DataSource = lista;
         }
+
+        private void Modulo_y_Estudiante_Activated(object sender, EventArgs e)
+        {
+            MidaiEsfe.Aplicacion.LogicaDeNegocio.AsignacionDeModuloBL _bl = new MidaiEsfe.Aplicacion.LogicaDeNegocio.AsignacionDeModuloBL();
+            List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Asignacion_De_Modulo> lista = new List<EntidadesDeNegocio.Asignacion_De_Modulo>();
+            lista = _bl.ObtenerTodos();
+            dataGridView1.DataSource = lista;
+        }
     }
 }

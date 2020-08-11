@@ -12,7 +12,7 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
 {
     public partial class ModulosyEstudiantesAgregar : Form
     {
-        private object txtFecha;
+       
 
         public ModulosyEstudiantesAgregar()
         {
@@ -58,5 +58,7 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         {
 
         }
+
+       
     }
 }

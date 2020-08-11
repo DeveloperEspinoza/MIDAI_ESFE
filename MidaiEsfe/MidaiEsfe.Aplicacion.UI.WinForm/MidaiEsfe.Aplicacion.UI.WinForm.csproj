@@ -58,11 +58,11 @@
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modulo y Estudiante.cs">
+    <Compile Include="ModuloyEstudiante.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modulo y Estudiante.Designer.cs">
-      <DependentUpon>Modulo y Estudiante.cs</DependentUpon>
+    <Compile Include="ModuloyEstudiante.Designer.cs">
+      <DependentUpon>ModuloyEstudiante.cs</DependentUpon>
     </Compile>
     <Compile Include="Modulo.cs">
       <SubType>Form</SubType>
@@ -132,8 +132,8 @@
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modulo y Estudiante.resx">
-      <DependentUpon>Modulo y Estudiante.cs</DependentUpon>
+    <EmbeddedResource Include="ModuloyEstudiante.resx">
+      <DependentUpon>ModuloyEstudiante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulo.resx">
       <DependentUpon>Modulo.cs</DependentUpon>
