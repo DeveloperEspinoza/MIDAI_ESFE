@@ -1,6 +1,6 @@
 ﻿namespace MidaiEsfe.Aplicacion.UI.WinForm
 {
-    partial class Nueva_Asignacion
+    partial class ModulosyEstudiantesAgregar
     {
         /// <summary>
         /// Required designer variable.
@@ -33,7 +33,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtIdPersona = new System.Windows.Forms.TextBox();
             this.txtIdModulo = new System.Windows.Forms.TextBox();
-            this.txtFecha = new System.Windows.Forms.TextBox();
+            this.DateTimeConverter = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -87,10 +87,10 @@
             // 
             // txtFecha
             // 
-            this.txtFecha.Location = new System.Drawing.Point(145, 136);
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(186, 20);
-            this.txtFecha.TabIndex = 5;
+            this.DateTimeConverter.Location = new System.Drawing.Point(145, 136);
+            this.DateTimeConverter.Name = "txtFecha";
+            this.DateTimeConverter.Size = new System.Drawing.Size(186, 20);
+            this.DateTimeConverter.TabIndex = 5;
             // 
             // button1
             // 
@@ -150,7 +150,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.txtFecha);
+            this.Controls.Add(this.DateTimeConverter);
             this.Controls.Add(this.txtIdModulo);
             this.Controls.Add(this.txtIdPersona);
             this.Controls.Add(this.label3);
@@ -171,7 +171,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtIdPersona;
         private System.Windows.Forms.TextBox txtIdModulo;
-        private System.Windows.Forms.TextBox txtFecha;
+        private System.Windows.Forms.TextBox DateTimeConverter;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label4;

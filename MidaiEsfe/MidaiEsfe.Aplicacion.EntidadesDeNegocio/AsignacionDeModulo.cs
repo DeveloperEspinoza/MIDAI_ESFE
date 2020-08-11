@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace MidaiEsfe.Aplicacion.EntidadesDeNegocio
 {
-     public  class AsignacionDeModulo
+     public  class Asignacion_De_Modulo
     {
-        public byte Id { get; set; }
+        public Int64 Id { get; set; }
 
-        public byte IdPersona { get; set; }
+        public Int64 IdPersona { get; set; }
 
-        public byte IdModulo { get; set; }
+        public Int64 IdModulo { get; set; }
 
         public DateTime FechaRegistro { get; set; }
     }

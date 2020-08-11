@@ -10,23 +10,23 @@ namespace MidaiEsfe.Aplicacion.LogicaDeNegocio
 {
     public class AsignacionDeModuloBL
     {
-        public int Guardar(AsignacionDeModulo pAsignacionDeModulo)
+        public int Guardar(Asignacion_De_Modulo pAsignacionDeModulo)
         {
             return AsignacionDeModuloDAL.Guardar(pAsignacionDeModulo);
         }
-        public static int Modificar(AsignacionDeModulo pAsignacionDeModulo)
+        public static int Modificar(Asignacion_De_Modulo pAsignacionDeModulo)
         {
             return AsignacionDeModuloDAL.Modificar(pAsignacionDeModulo);
         }
-        public static int Eliminar(AsignacionDeModulo pAsignacionDeModulo)
+        public static int Eliminar(Asignacion_De_Modulo pAsignacionDeModulo)
         {
             return AsignacionDeModuloDAL.Eliminar(pAsignacionDeModulo);
         }
-        public static List<AsignacionDeModulo> ObtenerTodos()
+        public List<Asignacion_De_Modulo> ObtenerTodos()
         {
             return AsignacionDeModuloDAL.ObtenerTodos();
         }
-        public static AsignacionDeModulo BuscarPorId(byte pId)
+        public static Asignacion_De_Modulo BuscarPorId(byte pId)
         {
             return AsignacionDeModuloDAL.BuscarPorId(pId);
         }

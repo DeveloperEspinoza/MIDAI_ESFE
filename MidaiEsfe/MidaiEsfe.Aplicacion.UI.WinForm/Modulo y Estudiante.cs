@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MidaiEsfe.Aplicacion.EntidadesDeNegocio;
+using MidaiEsfe.Aplicacion.LogicaDeNegocio;
 
 namespace MidaiEsfe.Aplicacion.UI.WinForm
 {
@@ -19,10 +21,18 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            Nueva_Asignacion Nueva_Asignacion = new Nueva_Asignacion();
+            ModulosyEstudiantesAgregar Modulo_y_Estudinate = new ModulosyEstudiantesAgregar();
             this.Hide();
-            Nueva_Asignacion.ShowDialog();
+            Modulo_y_Estudinate.ShowDialog();
             this.Show();
+        }
+
+        private void Modulo_y_Estudiante_Load(object sender, EventArgs e)
+        {
+            MidaiEsfe.Aplicacion.LogicaDeNegocio.AsignacionDeModuloBL _bl = new MidaiEsfe.Aplicacion.LogicaDeNegocio.AsignacionDeModuloBL();
+            List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Asignacion_De_Modulo> lista = new List<EntidadesDeNegocio.Asignacion_De_Modulo>();
+            lista = _bl.ObtenerTodos();
+            dataGridView1.DataSource = lista;
         }
     }
 }

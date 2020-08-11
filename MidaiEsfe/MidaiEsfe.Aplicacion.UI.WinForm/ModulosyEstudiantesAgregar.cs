@@ -10,9 +10,11 @@ using System.Windows.Forms;
 
 namespace MidaiEsfe.Aplicacion.UI.WinForm
 {
-    public partial class Nueva_Asignacion : Form
+    public partial class ModulosyEstudiantesAgregar : Form
     {
-        public Nueva_Asignacion()
+        private object txtFecha;
+
+        public ModulosyEstudiantesAgregar()
         {
             InitializeComponent();
         }
@@ -20,12 +22,11 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         private void button1_Click(object sender, EventArgs e)
         {
             //MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona _en = new MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona();
-            EntidadesDeNegocio.AsignacionDeModulo _entidad = new EntidadesDeNegocio.AsignacionDeModulo();
+            EntidadesDeNegocio.Asignacion_De_Modulo _entidad = new EntidadesDeNegocio.Asignacion_De_Modulo();
             //solo para modificar o eliminar
-            _entidad.IdPersona = byte.Parse(txtIdPersona.Text);
-            _entidad.IdModulo = byte.Parse(txtIdModulo.Text);
+            _entidad.IdPersona = Int64.Parse(txtIdPersona.Text);
+            _entidad.IdModulo = Int64.Parse(txtIdModulo.Text);
             _entidad.FechaRegistro = DateTime.Parse(txtFecha.Text);
-
             LogicaDeNegocio.AsignacionDeModuloBL _logica = new LogicaDeNegocio.AsignacionDeModuloBL();
 
             int resultadoDeMetodo = _logica.Guardar(_entidad);
