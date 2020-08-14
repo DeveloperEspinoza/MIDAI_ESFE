@@ -8,9 +8,9 @@ namespace MidaiEsfe.Aplicacion.EntidadesDeNegocio
 {
     public class Evaluaciones
     {
-        public byte Id { get; set; }
+        public Int64 Id { get; set; }
 
-        public byte IdModulo { get; set; }
+        public Int64 IdModulo { get; set; }
 
         public DateTime FechaRegistro { get; set; }
 

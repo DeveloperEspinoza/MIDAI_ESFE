@@ -12,10 +12,10 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
     {
         public static int Guardar(Notas pNotas)
         {
-            string consulta = "INSERT INTO Notas (IdEvaluacion, IdAsignacionDeModulo, Nota) values(@Evaluacion, @IdAsignacionDeModulo, @Nota)";
+            string consulta = "INSERT INTO Notas (Id_Evaluaciones, Id_Asignacion_De_Modulo, Nota) values(@Evaluaciones, @IdAsignacionDeModulo, @Nota)";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
-            comando.Parameters.AddWithValue("@Evaluacion", pNotas.IdEvaluacion);
+            comando.Parameters.AddWithValue("@Evaluaciones", pNotas.IdEvaluacion);
             comando.Parameters.AddWithValue("@IdAsignacionDeModulo", pNotas.IdAsignacionDeModulo);
             comando.Parameters.AddWithValue("@Nota", pNotas.Nota);
 
@@ -23,10 +23,10 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
         }
         public static int Modificar(Notas pNotas)
         {
-            string consulta = "UPDATE Notas SET IdEvaluacion=@IdEvaluacion, IdAsignacionDeModulo=@IdAsignacionDeModulo, Nota=@Nota WHERE Id=@Id";
+            string consulta = "UPDATE Notas SET Id_Evaluaciones=@IdEvaluaciones, Id_Asignacion_De_Modulo=@IdAsignacionDeModulo, Nota=@Nota WHERE Id=@Id";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
-            comando.Parameters.AddWithValue("@IdEvaluacion", pNotas.IdEvaluacion);
+            comando.Parameters.AddWithValue("@IdEvaluaciones", pNotas.IdEvaluacion);
             comando.Parameters.AddWithValue("@IdAsignacionDeModulo", pNotas.IdAsignacionDeModulo);
             comando.Parameters.AddWithValue("@Nota", pNotas.Nota);
             comando.Parameters.AddWithValue("@Id", pNotas.Id);
@@ -43,7 +43,7 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
         }
         public static List<Notas> ObtenerTodos()
         {
-            String consulta = "SELECT TOP 500 n.Id, n.IdEvaluacion, n.IdAsignacionDeModulo, n.Nota FROM Notas n";
+            String consulta = "SELECT TOP 500 n.Id, n.Id_Evaluaciones, n.Id_Asignacion_De_Modulo, n.Nota FROM Notas n";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
             SqlDataReader reader = ComunDB.EjecutarComandoReader(comando);
@@ -51,17 +51,17 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
             while (reader.Read())
             {
                 Notas Notas = new Notas();
-                Notas.Id = reader.GetByte(0);
-                Notas.IdEvaluacion = reader.GetByte(1);
-                Notas.IdAsignacionDeModulo = reader.GetByte(2);
-                Notas.Nota = reader.GetByte(3);
+                Notas.Id = reader.GetInt64(0);
+                Notas.IdEvaluacion = reader.GetInt64(1);
+                Notas.IdAsignacionDeModulo = reader.GetInt64(2);
+                Notas.Nota = reader.GetInt32(3);
                 listaNotas.Add(Notas);
             }
             return listaNotas;
         }
         public static Notas BuscarPorId(byte pId)
         {
-            string consulta = "SELECT n.Id, e.IdEvaluacion, n.IdAsignacionDeModulo, n.Nota FROM Notas n WHERE Id = @Id";
+            string consulta = "SELECT n.Id, e.Id_Evaluaciones, n.Id_Asignacion_De_Modulo, n.Nota FROM Notas n WHERE Id = @Id";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
             comando.Parameters.AddWithValue("@Id", pId);

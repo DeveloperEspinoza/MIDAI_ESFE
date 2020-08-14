@@ -77,6 +77,7 @@
             this.txtIdPersona.Name = "txtIdPersona";
             this.txtIdPersona.Size = new System.Drawing.Size(329, 20);
             this.txtIdPersona.TabIndex = 3;
+            this.txtIdPersona.TextChanged += new System.EventHandler(this.txtIdPersona_TextChanged);
             // 
             // txtIdModulo
             // 
@@ -159,6 +160,7 @@
             this.Name = "ModulosyEstudiantesAgregar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nueva_Asignacion";
+            this.Load += new System.EventHandler(this.ModulosyEstudiantesAgregar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

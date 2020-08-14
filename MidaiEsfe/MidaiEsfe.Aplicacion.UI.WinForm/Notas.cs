@@ -24,5 +24,21 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             Nueva_Nota.ShowDialog();
             this.Show();
         }
+
+        private void Notas_Load(object sender, EventArgs e)
+        {
+            MidaiEsfe.Aplicacion.LogicaDeNegocio.NotasBL _bl = new MidaiEsfe.Aplicacion.LogicaDeNegocio.NotasBL();
+            List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Notas> lista = new List<EntidadesDeNegocio.Notas>();
+            lista = _bl.ObtenerTodos();
+            dataGridView1.DataSource = lista;
+        }
+
+        private void Notas_Activated(object sender, EventArgs e)
+        {
+            MidaiEsfe.Aplicacion.LogicaDeNegocio.NotasBL _bl = new MidaiEsfe.Aplicacion.LogicaDeNegocio.NotasBL();
+            List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Notas> lista = new List<EntidadesDeNegocio.Notas>();
+            lista = _bl.ObtenerTodos();
+            dataGridView1.DataSource = lista;
+        }
     }
 }

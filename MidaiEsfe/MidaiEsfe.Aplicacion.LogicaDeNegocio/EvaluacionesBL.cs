@@ -22,7 +22,7 @@ namespace MidaiEsfe.Aplicacion.LogicaDeNegocio
         {
             return EvaluacionesDAL.Eliminar(pEvaluaciones);
         }
-        public static List<Evaluaciones> ObtenerTodos()
+        public List<Evaluaciones> ObtenerTodos()
         {
             return EvaluacionesDAL.ObtenerTodos();
         }

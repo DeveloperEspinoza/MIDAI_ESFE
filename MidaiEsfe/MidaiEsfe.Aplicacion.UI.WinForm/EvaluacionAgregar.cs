@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MidaiEsfe.Aplicacion.UI.WinForm
 {
-    public partial class Nueva_Nota : Form
+    public partial class EvaluacionAgregar : Form
     {
-        public Nueva_Nota()
+        public EvaluacionAgregar()
         {
             InitializeComponent();
         }
@@ -20,22 +20,21 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         private void button1_Click(object sender, EventArgs e)
         {
             //MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona _en = new MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona();
-            EntidadesDeNegocio.Notas _entidad = new EntidadesDeNegocio.Notas();
+            EntidadesDeNegocio.Evaluaciones _entidad = new EntidadesDeNegocio.Evaluaciones();
             //solo para modificar o eliminar
-            _entidad.IdEvaluacion = byte.Parse(txtIdEvaluaciones.Text);
-            _entidad.IdAsignacionDeModulo = byte.Parse(txtIdModuloyEstudiante.Text);
-            _entidad.Nota = byte.Parse(txtNota.Text);
-
-            LogicaDeNegocio.NotasBL _logica = new LogicaDeNegocio.NotasBL();
+            _entidad.IdModulo = Int64.Parse(txtIdModulo.Text);
+            _entidad.FechaRegistro = DateTime.Parse(dateTimePicker1.Text);
+            _entidad.Detalle = txtDetalle.Text;
+            LogicaDeNegocio.EvaluacionesBL _logica = new LogicaDeNegocio.EvaluacionesBL();
 
             int resultadoDeMetodo = _logica.Guardar(_entidad);
 
             if (resultadoDeMetodo == 1)
             {
                 MessageBox.Show("EL registro fue agregado con exito");
-                txtIdEvaluaciones.Text = "";
-                txtIdModuloyEstudiante.Text = "";
-                txtNota.Text = "";
+                txtIdModulo.Text = "";
+                dateTimePicker1.Text = "";
+                txtDetalle.Text = "";
             }
             else
             {
@@ -48,14 +47,10 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             this.Close();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

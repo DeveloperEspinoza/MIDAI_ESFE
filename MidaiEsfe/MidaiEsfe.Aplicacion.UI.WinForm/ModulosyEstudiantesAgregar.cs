@@ -59,6 +59,14 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
 
         }
 
-       
+        private void txtIdPersona_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ModulosyEstudiantesAgregar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

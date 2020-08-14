@@ -106,7 +106,7 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
 
         private void evaluacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Evaluaciones Evaluaciones = new Evaluaciones();
+            Evaluacion Evaluaciones = new Evaluacion();
             this.Hide();
             Evaluaciones.ShowDialog();
             this.Show();

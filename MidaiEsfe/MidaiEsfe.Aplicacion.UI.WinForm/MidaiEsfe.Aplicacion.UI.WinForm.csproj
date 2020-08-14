@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Evaluaciones.cs">
+    <Compile Include="Evaluacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Evaluaciones.Designer.cs">
-      <DependentUpon>Evaluaciones.cs</DependentUpon>
+    <Compile Include="Evaluacion.Designer.cs">
+      <DependentUpon>Evaluacion.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
@@ -82,17 +82,17 @@
     <Compile Include="ModulosyEstudiantesAgregar.Designer.cs">
       <DependentUpon>ModulosyEstudiantesAgregar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Nueva Evaluacion.cs">
+    <Compile Include="EvaluacionAgregar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Nueva Evaluacion.Designer.cs">
-      <DependentUpon>Nueva Evaluacion.cs</DependentUpon>
+    <Compile Include="EvaluacionAgregar.Designer.cs">
+      <DependentUpon>EvaluacionAgregar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Nueva Nota.cs">
+    <Compile Include="NotasAgregar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Nueva Nota.Designer.cs">
-      <DependentUpon>Nueva Nota.cs</DependentUpon>
+    <Compile Include="NotasAgregar.Designer.cs">
+      <DependentUpon>NotasAgregar.cs</DependentUpon>
     </Compile>
     <Compile Include="Persona.cs">
       <SubType>Form</SubType>
@@ -126,8 +126,8 @@
     <Compile Include="TipoPersonaAgregar.Designer.cs">
       <DependentUpon>TipoPersonaAgregar.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Evaluaciones.resx">
-      <DependentUpon>Evaluaciones.cs</DependentUpon>
+    <EmbeddedResource Include="Evaluacion.resx">
+      <DependentUpon>Evaluacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
@@ -144,11 +144,11 @@
     <EmbeddedResource Include="ModulosyEstudiantesAgregar.resx">
       <DependentUpon>ModulosyEstudiantesAgregar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Nueva Evaluacion.resx">
-      <DependentUpon>Nueva Evaluacion.cs</DependentUpon>
+    <EmbeddedResource Include="EvaluacionAgregar.resx">
+      <DependentUpon>EvaluacionAgregar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Nueva Nota.resx">
-      <DependentUpon>Nueva Nota.cs</DependentUpon>
+    <EmbeddedResource Include="NotasAgregar.resx">
+      <DependentUpon>NotasAgregar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Persona.resx">
       <DependentUpon>Persona.cs</DependentUpon>

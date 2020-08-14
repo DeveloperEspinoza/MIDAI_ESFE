@@ -50,8 +50,6 @@ C:\Users\Karla\Developers\GIT\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinFo
 C:\Users\Karla\Developers\GIT\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinForm\obj\Debug\MidaiEsfe.Aplicacion.UI.WinForm.Persona.resources
 C:\Users\Karla\Developers\GIT\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinForm\obj\Debug\MidaiEsfe.Aplicacion.UI.WinForm.Modulo.resources
 C:\Users\Karla\Developers\GIT\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinForm\obj\Debug\MidaiEsfe.Aplicacion.UI.WinForm.Modulo_y_Estudiante.resources
-C:\Users\Karla\Developers\GIT\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinForm\obj\Debug\MidaiEsfe.Aplicacion.UI.WinForm.Evaluaciones.resources
-C:\Users\Karla\Developers\GIT\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinForm\obj\Debug\MidaiEsfe.Aplicacion.UI.WinForm.Nueva_Evaluacion.resources
 C:\Users\Karla\Developers\GIT\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinForm\obj\Debug\MidaiEsfe.Aplicacion.UI.WinForm.Notas.resources
 C:\Users\Karla\Developers\GIT\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinForm\obj\Debug\MidaiEsfe.Aplicacion.UI.WinForm.Nueva_Nota.resources
 C:\Users\Luise\Developers\git\.net\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinForm\obj\Debug\MidaiEsfe.Aplicacion.UI.WinForm.Evaluaciones.resources
@@ -67,3 +65,5 @@ C:\Users\Karla\Developers\GIT\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinFo
 C:\Users\Karla\Developers\GIT\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinForm\obj\Debug\MidaiEsfe.Aplicacion.UI.WinForm.ModulosyEstudiantesAgregar.resources
 C:\Users\Luise\Developers\git\.net\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinForm\obj\Debug\MidaiEsfe.Aplicacion.UI.WinForm.ModulosyEstudiantesAgregar.resources
 C:\Users\Luise\Developers\git\.net\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinForm\obj\Debug\MidaiEsfe.Aplicacion.UI.WinForm.ModuloAgregar.resources
+C:\Users\Karla\Developers\GIT\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinForm\obj\Debug\MidaiEsfe.Aplicacion.UI.WinForm.Evaluacion.resources
+C:\Users\Karla\Developers\GIT\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinForm\obj\Debug\MidaiEsfe.Aplicacion.UI.WinForm.EvaluacionAgregar.resources

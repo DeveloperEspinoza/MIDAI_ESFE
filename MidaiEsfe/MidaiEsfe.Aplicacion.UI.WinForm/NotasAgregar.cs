@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MidaiEsfe.Aplicacion.UI.WinForm
 {
-    public partial class Nueva_Evaluacion : Form
+    public partial class Nueva_Nota : Form
     {
-        public Nueva_Evaluacion()
+        public Nueva_Nota()
         {
             InitializeComponent();
         }
@@ -20,22 +20,22 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         private void button1_Click(object sender, EventArgs e)
         {
             //MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona _en = new MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona();
-            EntidadesDeNegocio.Evaluaciones _entidad = new EntidadesDeNegocio.Evaluaciones();
+            EntidadesDeNegocio.Notas _entidad = new EntidadesDeNegocio.Notas();
             //solo para modificar o eliminar
-            _entidad.IdModulo = byte.Parse(txtIdModulo.Text);
-            _entidad.FechaRegistro = DateTime.Parse(txtFecha.Text);
-            _entidad.Detalle = txtDetalle.Text;
+            _entidad.IdEvaluacion = Int64.Parse(txtIdEvaluaciones.Text);
+            _entidad.IdAsignacionDeModulo = Int64.Parse(txtIdModuloyEstudiante.Text);
+            _entidad.Nota = Int64.Parse(txtNota.Text);
 
-            LogicaDeNegocio.EvaluacionesBL _logica = new LogicaDeNegocio.EvaluacionesBL();
+            LogicaDeNegocio.NotasBL _logica = new LogicaDeNegocio.NotasBL();
 
             int resultadoDeMetodo = _logica.Guardar(_entidad);
 
             if (resultadoDeMetodo == 1)
             {
                 MessageBox.Show("EL registro fue agregado con exito");
-                txtIdModulo.Text = "";
-                txtFecha.Text = "";
-                txtDetalle.Text = "";
+                txtIdEvaluaciones.Text = "";
+                txtIdModuloyEstudiante.Text = "";
+                txtNota.Text = "";
             }
             else
             {
@@ -48,7 +48,17 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             this.Close();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Nueva_Nota_Load(object sender, EventArgs e)
         {
 
         }
