@@ -15,11 +15,11 @@ namespace MidaiEsfe.Aplicacion.LogicaDeNegocio
             return TipoPersonaDAL.Guardar(pTipoPersona);
         }
 
-        public static int Modificar(TipoPersona pTipoPersona)
+        public  int Modificar(TipoPersona pTipoPersona)
         {
             return TipoPersonaDAL.Modificar(pTipoPersona);
         }
-        public static int Eliminar (TipoPersona pTipoPersona)
+        public  int Eliminar (TipoPersona pTipoPersona)
         {
             return TipoPersonaDAL.Eliminar(pTipoPersona);
         }
@@ -27,7 +27,7 @@ namespace MidaiEsfe.Aplicacion.LogicaDeNegocio
         {
             return TipoPersonaDAL.ObtenerTodos();
         }
-        public static TipoPersona BuscarPorId(byte pId)
+        public  TipoPersona BuscarPorId(byte pId)
         {
             return TipoPersonaDAL.BuscarPorId(pId);
         }
