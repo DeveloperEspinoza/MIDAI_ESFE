@@ -14,11 +14,11 @@ namespace MidaiEsfe.Aplicacion.LogicaDeNegocio
         {
             return PersonaDAL.Guardar(pPersona);
         }
-        public static int Modificar(Persona pPersona)
+        public  int Modificar(Persona pPersona)
         {
             return PersonaDAL.Modificar(pPersona);
         }
-        public static int Eliminar(Persona pPersona)
+        public  int Eliminar(Persona pPersona)
         {
             return PersonaDAL.Eliminar(pPersona);
         }
@@ -26,7 +26,7 @@ namespace MidaiEsfe.Aplicacion.LogicaDeNegocio
         {
             return PersonaDAL.ObtenerTodos();
         }
-        public static Persona BuscarPorId(byte pId)
+        public  Persona BuscarPorId(byte pId)
         {
             return PersonaDAL.BuscarPorId(pId);
         }

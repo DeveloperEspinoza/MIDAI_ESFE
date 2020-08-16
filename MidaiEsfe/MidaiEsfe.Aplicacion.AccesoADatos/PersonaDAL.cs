@@ -24,7 +24,7 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
         }
         public static int Modificar(Persona pPersona)
         {
-            string consulta = "UPDATE Persona SET IdTipoPersona=@IdTipoPersona, Nombres=@Nombres,Apellidos=@Apellidos WHERE Id=@Id";
+            string consulta = "UPDATE Persona SET Id_Tipo_Persona=@IdTipoPersona, Nombres=@Nombres,Apellidos=@Apellidos WHERE Id=@Id";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
             comando.Parameters.AddWithValue("@IdTipoPersona", pPersona.IdTipoPersona);
