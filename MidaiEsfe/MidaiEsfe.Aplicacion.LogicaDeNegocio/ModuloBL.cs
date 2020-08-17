@@ -14,11 +14,11 @@ namespace MidaiEsfe.Aplicacion.LogicaDeNegocio
         {
             return ModuloDAL.Guardar(pModulo);
         }
-        public static int Modificar(Modulo pModulo)
+        public int Modificar(Modulo pModulo)
         {
             return ModuloDAL.Modificar(pModulo);
         }
-        public static int Eliminar(Modulo pModulo)
+        public int Eliminar(Modulo pModulo)
         {
             return ModuloDAL.Eliminar(pModulo);
         }
@@ -26,7 +26,7 @@ namespace MidaiEsfe.Aplicacion.LogicaDeNegocio
         {
             return ModuloDAL.ObtenerTodos();
         }
-        public static Modulo BuscarPorId(byte pId)
+        public Modulo BuscarPorId(byte pId)
         {
             return ModuloDAL.BuscarPorId(pId);
         }

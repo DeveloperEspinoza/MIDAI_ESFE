@@ -14,11 +14,11 @@ namespace MidaiEsfe.Aplicacion.LogicaDeNegocio
         {
             return AsignacionDeModuloDAL.Guardar(pAsignacionDeModulo);
         }
-        public static int Modificar(Asignacion_De_Modulo pAsignacionDeModulo)
+        public int Modificar(Asignacion_De_Modulo pAsignacionDeModulo)
         {
             return AsignacionDeModuloDAL.Modificar(pAsignacionDeModulo);
         }
-        public static int Eliminar(Asignacion_De_Modulo pAsignacionDeModulo)
+        public int Eliminar(Asignacion_De_Modulo pAsignacionDeModulo)
         {
             return AsignacionDeModuloDAL.Eliminar(pAsignacionDeModulo);
         }
@@ -26,7 +26,7 @@ namespace MidaiEsfe.Aplicacion.LogicaDeNegocio
         {
             return AsignacionDeModuloDAL.ObtenerTodos();
         }
-        public static Asignacion_De_Modulo BuscarPorId(byte pId)
+        public Asignacion_De_Modulo BuscarPorId(byte pId)
         {
             return AsignacionDeModuloDAL.BuscarPorId(pId);
         }

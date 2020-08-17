@@ -58,5 +58,10 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         {
 
         }
+
+        private void PersonaAgregar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

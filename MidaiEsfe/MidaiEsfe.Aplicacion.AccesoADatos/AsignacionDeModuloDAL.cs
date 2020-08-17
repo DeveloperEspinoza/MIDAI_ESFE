@@ -12,7 +12,7 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
     {
         public static int Guardar(Asignacion_De_Modulo pAsignacionDeModulo)
         {
-            string consulta = "INSERT INTO ASIGNACION_DE_MODULO (Id_Persona,Id_Modulo, Fecha_Registro) values(@IdPersona, @IdModulo, @FechaRegistro)";
+            string consulta = "INSERT INTO ASIGNACION_DE_MODULO (Id_Persona, Id_Modulo, Fecha_Registro) values(@IdPersona, @IdModulo, @FechaRegistro)";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
             comando.Parameters.AddWithValue("@IdPersona", pAsignacionDeModulo.IdPersona);
@@ -23,13 +23,14 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
         }
         public static int Modificar(Asignacion_De_Modulo pAsignacionDeModulo)
         {
-            string consulta = "UPDATE ASIGNACION_DE_MODULO SET IdPersona=@IdPersona, IdModulo=@IdModulo, FechaRegistro=@FechaRegistro WHERE Id=@Id";
+            string consulta = "UPDATE ASIGNACION_DE_MODULO SET ID_PERSONA='@Id_Persona', ID_MODULO='@IdModulo', FECHA_REGISTRO='@FechaRegistro' WHERE Id='@Id'";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
             comando.Parameters.AddWithValue("@IdPersona", pAsignacionDeModulo.IdPersona);
             comando.Parameters.AddWithValue("@IdModulo", pAsignacionDeModulo.IdModulo);
             comando.Parameters.AddWithValue("@FechaRegistro", pAsignacionDeModulo.FechaRegistro);
             comando.Parameters.AddWithValue("@Id", pAsignacionDeModulo.Id);
+
             return ComunDB.EjecutarComando(comando);
         }
         public static int Eliminar(Asignacion_De_Modulo pAsignacionDeModulo)
@@ -69,9 +70,9 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
             Asignacion_De_Modulo AsignacionDeModulo = new Asignacion_De_Modulo();
             while (reader.Read())
             {
-                AsignacionDeModulo.Id = reader.GetByte(0);
-                AsignacionDeModulo.IdPersona = reader.GetByte(1);
-                AsignacionDeModulo.IdModulo = reader.GetByte(2);
+                AsignacionDeModulo.Id = reader.GetInt64(0);
+                AsignacionDeModulo.IdPersona = reader.GetInt64(1);
+                AsignacionDeModulo.IdModulo = reader.GetInt64(2);
                 AsignacionDeModulo.FechaRegistro = reader.GetDateTime(3);
             }
             return AsignacionDeModulo;
