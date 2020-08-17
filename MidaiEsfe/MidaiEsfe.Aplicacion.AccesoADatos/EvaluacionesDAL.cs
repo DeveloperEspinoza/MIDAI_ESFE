@@ -12,32 +12,32 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
     {
         public static int Guardar(Evaluaciones pEvaluaciones)
         {
-            string consulta = "INSERT INTO Evaluaciones (Id_Modulo, Fecha_Registro, Detalle) values(@IdModulo, @FechaRegistro, @Detalle)";
+            string consulta = "INSERT INTO Evaluaciones (Id_Modulo, Fecha_Registro, Detalle) values(@Id_Modulo, @Fecha_Registro, @Detalle)";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
-            comando.Parameters.AddWithValue("@IdModulo", pEvaluaciones.IdModulo);
-            comando.Parameters.AddWithValue("@FechaRegistro", pEvaluaciones.FechaRegistro);
+            comando.Parameters.AddWithValue("@Id_Modulo", pEvaluaciones.IdModulo);
+            comando.Parameters.AddWithValue("@Fecha_Registro", pEvaluaciones.FechaRegistro);
             comando.Parameters.AddWithValue("@Detalle", pEvaluaciones.Detalle);
 
             return ComunDB.EjecutarComando(comando);
         }
         public static int Modificar(Evaluaciones pEvaluaciones)
         {
-            string consulta = "UPDATE Evaluaciones SET Id_Modulo=@IdModulo, Fecha_Registro=@FechaRegistro, Detalle=@Detalle WHERE Id=@Id";
+            string consulta = "UPDATE Evaluaciones SET Id_Modulo=@Id_Modulo, Fecha_Registro=@Fecha_Registro, Detalle=@Detalle WHERE Id=@Id";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
-            comando.Parameters.AddWithValue("@IdModulo", pEvaluaciones.IdModulo);
-            comando.Parameters.AddWithValue("@FechaRegistro", pEvaluaciones.FechaRegistro);
+            comando.Parameters.AddWithValue("@Id_Modulo", pEvaluaciones.IdModulo);
+            comando.Parameters.AddWithValue("@Fecha_Registro", pEvaluaciones.FechaRegistro);
             comando.Parameters.AddWithValue("@Detalle", pEvaluaciones.Detalle);
             comando.Parameters.AddWithValue("@Id", pEvaluaciones.Id);
             return ComunDB.EjecutarComando(comando);
         }
-        public static int Eliminar(Evaluaciones pEvaluacione)
+        public static int Eliminar(Evaluaciones pEvaluaciones)
         {
             string consulta = "DELETE FROM Evaluaciones WHERE Id=@Id";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
-            comando.Parameters.AddWithValue("@Id", pEvaluacione.Id);
+            comando.Parameters.AddWithValue("@Id", pEvaluaciones.Id);
 
             return ComunDB.EjecutarComando(comando);
         }
@@ -69,8 +69,8 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
             Evaluaciones Evaluaciones = new Evaluaciones();
             while (reader.Read())
             {
-                Evaluaciones.Id = reader.GetByte(0);
-                Evaluaciones.IdModulo = reader.GetByte(1);
+                Evaluaciones.Id = reader.GetInt64(0);
+                Evaluaciones.IdModulo = reader.GetInt64(1);
                 Evaluaciones.FechaRegistro = reader.GetDateTime(2);
                 Evaluaciones.Detalle = reader.GetString(3);
             }

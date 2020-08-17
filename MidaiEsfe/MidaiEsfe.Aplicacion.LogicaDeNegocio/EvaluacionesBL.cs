@@ -14,11 +14,11 @@ namespace MidaiEsfe.Aplicacion.LogicaDeNegocio
         {
             return EvaluacionesDAL.Guardar(pEvaluaciones);
         }
-        public static int Modificar(Evaluaciones pEvaluaciones)
+        public int Modificar(Evaluaciones pEvaluaciones)
         {
             return EvaluacionesDAL.Modificar(pEvaluaciones);
         }
-        public static int Eliminar(Evaluaciones pEvaluaciones)
+        public int Eliminar(Evaluaciones pEvaluaciones)
         {
             return EvaluacionesDAL.Eliminar(pEvaluaciones);
         }
@@ -26,7 +26,7 @@ namespace MidaiEsfe.Aplicacion.LogicaDeNegocio
         {
             return EvaluacionesDAL.ObtenerTodos();
         }
-        public static Evaluaciones BuscarPorId(byte pId)
+        public Evaluaciones BuscarPorId(byte pId)
         {
             return EvaluacionesDAL.BuscarPorId(pId);
         }
