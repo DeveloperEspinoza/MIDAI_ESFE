@@ -23,12 +23,12 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
         }
         public static int Modificar(Asignacion_De_Modulo pAsignacionDeModulo)
         {
-            string consulta = "UPDATE ASIGNACION_DE_MODULO SET ID_PERSONA='@Id_Persona', ID_MODULO='@IdModulo', FECHA_REGISTRO='@FechaRegistro' WHERE Id='@Id'";
+            string consulta = "UPDATE ASIGNACION_DE_MODULO SET ID_PERSONA=@Id_Persona, ID_MODULO=@Id_Modulo, FECHA_REGISTRO=@Fecha_Registro WHERE Id=@Id";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
-            comando.Parameters.AddWithValue("@IdPersona", pAsignacionDeModulo.IdPersona);
-            comando.Parameters.AddWithValue("@IdModulo", pAsignacionDeModulo.IdModulo);
-            comando.Parameters.AddWithValue("@FechaRegistro", pAsignacionDeModulo.FechaRegistro);
+            comando.Parameters.AddWithValue("@Id_Persona", pAsignacionDeModulo.IdPersona);
+            comando.Parameters.AddWithValue("@Id_Modulo", pAsignacionDeModulo.IdModulo);
+            comando.Parameters.AddWithValue("@Fecha_Registro", pAsignacionDeModulo.FechaRegistro);
             comando.Parameters.AddWithValue("@Id", pAsignacionDeModulo.Id);
 
             return ComunDB.EjecutarComando(comando);
