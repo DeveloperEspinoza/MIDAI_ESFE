@@ -113,7 +113,7 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         {
             //setiamos a la entidad
             modeloParaModificar.IdPersona = Int64.Parse(txtIdPersona.Text);
-            modeloParaModificar.IdModulo = Int64.Parse(txtIdPersona.Text);
+            modeloParaModificar.IdModulo = Int64.Parse(txtIdModulo.Text);
             modeloParaModificar.FechaRegistro = DateTime.Parse(txtFecha.Text);
 
 

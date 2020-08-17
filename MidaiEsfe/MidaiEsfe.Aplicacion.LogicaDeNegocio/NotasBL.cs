@@ -14,11 +14,11 @@ namespace MidaiEsfe.Aplicacion.LogicaDeNegocio
         {
             return NotasDAL.Guardar(pNotas);
         }
-        public static int Modificar(Notas pNotas)
+        public int Modificar(Notas pNotas)
         {
             return NotasDAL.Modificar(pNotas);
         }
-        public static int Eliminar(Notas pNotas)
+        public int Eliminar(Notas pNotas)
         {
             return NotasDAL.Eliminar(pNotas);
         }
@@ -26,7 +26,7 @@ namespace MidaiEsfe.Aplicacion.LogicaDeNegocio
         {
             return NotasDAL.ObtenerTodos();
         }
-        public static Notas BuscarPorId(byte pId)
+        public Notas BuscarPorId(byte pId)
         {
             return NotasDAL.BuscarPorId(pId);
         }

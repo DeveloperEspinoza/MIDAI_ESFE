@@ -54,7 +54,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 100);
+            this.label2.Location = new System.Drawing.Point(12, 120);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(156, 16);
             this.label2.TabIndex = 1;
@@ -64,7 +64,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 144);
+            this.label3.Location = new System.Drawing.Point(12, 185);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 16);
             this.label3.TabIndex = 2;
@@ -73,29 +73,29 @@
             // 
             // txtIdEvaluaciones
             // 
-            this.txtIdEvaluaciones.Location = new System.Drawing.Point(135, 54);
+            this.txtIdEvaluaciones.Location = new System.Drawing.Point(15, 77);
             this.txtIdEvaluaciones.Name = "txtIdEvaluaciones";
-            this.txtIdEvaluaciones.Size = new System.Drawing.Size(239, 20);
+            this.txtIdEvaluaciones.Size = new System.Drawing.Size(256, 20);
             this.txtIdEvaluaciones.TabIndex = 3;
             // 
             // txtIdModuloyEstudiante
             // 
-            this.txtIdModuloyEstudiante.Location = new System.Drawing.Point(179, 96);
+            this.txtIdModuloyEstudiante.Location = new System.Drawing.Point(15, 139);
             this.txtIdModuloyEstudiante.Name = "txtIdModuloyEstudiante";
-            this.txtIdModuloyEstudiante.Size = new System.Drawing.Size(195, 20);
+            this.txtIdModuloyEstudiante.Size = new System.Drawing.Size(256, 20);
             this.txtIdModuloyEstudiante.TabIndex = 4;
             // 
             // txtNota
             // 
-            this.txtNota.Location = new System.Drawing.Point(135, 143);
+            this.txtNota.Location = new System.Drawing.Point(15, 204);
             this.txtNota.Name = "txtNota";
-            this.txtNota.Size = new System.Drawing.Size(239, 20);
+            this.txtNota.Size = new System.Drawing.Size(256, 20);
             this.txtNota.TabIndex = 5;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(135, 185);
+            this.button1.Location = new System.Drawing.Point(15, 264);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 23);
             this.button1.TabIndex = 6;
@@ -106,7 +106,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(284, 185);
+            this.button2.Location = new System.Drawing.Point(181, 264);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(90, 23);
             this.button2.TabIndex = 7;
@@ -122,7 +122,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(405, 47);
+            this.label4.Size = new System.Drawing.Size(355, 47);
             this.label4.TabIndex = 12;
             this.label4.Text = "Notas";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -134,9 +134,9 @@
             this.label6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label6.Font = new System.Drawing.Font("Segoe UI Light", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label6.Location = new System.Drawing.Point(0, 236);
+            this.label6.Location = new System.Drawing.Point(0, 292);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(405, 47);
+            this.label6.Size = new System.Drawing.Size(355, 47);
             this.label6.TabIndex = 14;
             this.label6.Text = "Aplicacion de control de notas";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -145,7 +145,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(405, 283);
+            this.ClientSize = new System.Drawing.Size(355, 339);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
