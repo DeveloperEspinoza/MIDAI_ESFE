@@ -14,17 +14,42 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
 {
     public partial class Persona : Form
     {
+        //INTANCIAR BL Y EN
+        List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona> _listaTipoPersona = new List<EntidadesDeNegocio.TipoPersona>();
+        MidaiEsfe.Aplicacion.LogicaDeNegocio.TipoPersonaBL _blTipoPersona = new TipoPersonaBL();
+
+
         public Persona()
         {
             InitializeComponent();
+            limpiadorYDehabilitadordeCampos();
+            ObtenerTodosLosTiposDePersonas();
 
+        }
+
+       
+        private void ObtenerTodosLosTiposDePersonas()
+        {
+            
+            _listaTipoPersona = _blTipoPersona.ObtenerTodos();
+            //cuando ya tenemos la lista se la setiamos al combox
+            cbIdTipoPersona.DataSource = _listaTipoPersona;
+            cbIdTipoPersona.DisplayMember = "Nombre";
+            cbIdTipoPersona.ValueMember = "Id";
+
+
+         }
+
+       private void limpiadorYDehabilitadordeCampos()
+        {
             // deshabilitamos todo
             txtNombres.Enabled = false;
             txtApellidos.Enabled = false;
-            txtIdTipoPersona.Enabled = false;
+            cbIdTipoPersona.Enabled = false;
             btnEliminar.Enabled = false;
             btnModificar.Enabled = false;
         }
+
 
         public MidaiEsfe.Aplicacion.EntidadesDeNegocio.Persona modeloParaModificar = new EntidadesDeNegocio.Persona();
 
@@ -67,12 +92,14 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
                 //de la entidad le pasamos los datos a las cajas de texto
                 txtNombres.Text = modeloParaModificar.Nombres;
                 txtApellidos.Text = modeloParaModificar.Apellidos;
-                txtIdTipoPersona.Text = modeloParaModificar.IdTipoPersona.ToString();
+
+                cbIdTipoPersona.SelectedValue = modeloParaModificar.IdTipoPersona;
+           
 
                 // habilitamos todo
                 txtNombres.Enabled = true;
                 txtApellidos.Enabled = true;
-                txtIdTipoPersona.Enabled = true;
+                cbIdTipoPersona.Enabled = true;
                 btnEliminar.Enabled = true;
                 btnModificar.Enabled = true;
                 
@@ -97,11 +124,7 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
                 dataGridView1.DataSource = lista;
 
                 // deshabilitamos todo
-                txtNombres.Enabled = false;
-                txtApellidos.Enabled = false;
-                txtIdTipoPersona.Enabled = false;
-                btnEliminar.Enabled = false;
-                btnModificar.Enabled = false;
+                limpiadorYDehabilitadordeCampos();
             }
             else
             {
@@ -114,7 +137,7 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             //setiamos a la entidad
             modeloParaModificar.Nombres = txtNombres.Text;
             modeloParaModificar.Apellidos = txtApellidos.Text;
-            modeloParaModificar.IdTipoPersona = Int64.Parse(txtIdTipoPersona.Text);
+            modeloParaModificar.IdTipoPersona = Int64.Parse(cbIdTipoPersona.SelectedValue.ToString());
 
 
             MidaiEsfe.Aplicacion.LogicaDeNegocio.PersonaBL _bl = new MidaiEsfe.Aplicacion.LogicaDeNegocio.PersonaBL();
@@ -129,16 +152,17 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
                 dataGridView1.DataSource = lista;
 
                 // deshabilitamos todo
-                txtNombres.Enabled = false;
-                txtApellidos.Enabled = false;
-                txtIdTipoPersona.Enabled = false;
-                btnEliminar.Enabled = false;
-                btnModificar.Enabled = false;
+                limpiadorYDehabilitadordeCampos();
             }
             else
             {
                 MessageBox.Show("El registro no fue modificado");
             }
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

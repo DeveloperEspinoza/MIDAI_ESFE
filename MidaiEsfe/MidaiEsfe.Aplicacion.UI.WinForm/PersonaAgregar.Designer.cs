@@ -33,11 +33,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtIdTipoPersona = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.cbIdTipoPersona = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // Label1
@@ -81,21 +81,15 @@
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(25, 163);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 16);
+            this.label3.Size = new System.Drawing.Size(96, 16);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Id Tipo Persona:";
-            // 
-            // txtIdTipoPersona
-            // 
-            this.txtIdTipoPersona.Location = new System.Drawing.Point(28, 182);
-            this.txtIdTipoPersona.Name = "txtIdTipoPersona";
-            this.txtIdTipoPersona.Size = new System.Drawing.Size(375, 20);
-            this.txtIdTipoPersona.TabIndex = 5;
+            this.label3.Text = "Tipo Persona:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(76, 239);
+            this.btnGuardar.Location = new System.Drawing.Point(76, 240);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(81, 23);
             this.btnGuardar.TabIndex = 6;
@@ -106,7 +100,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(265, 239);
+            this.btnCancelar.Location = new System.Drawing.Point(265, 240);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(80, 23);
             this.btnCancelar.TabIndex = 7;
@@ -134,23 +128,31 @@
             this.label6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label6.Font = new System.Drawing.Font("Segoe UI Light", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label6.Location = new System.Drawing.Point(0, 302);
+            this.label6.Location = new System.Drawing.Point(0, 300);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(426, 47);
             this.label6.TabIndex = 11;
             this.label6.Text = "Aplicacion de control de notas";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // cbIdTipoPersona
+            // 
+            this.cbIdTipoPersona.FormattingEnabled = true;
+            this.cbIdTipoPersona.Location = new System.Drawing.Point(28, 182);
+            this.cbIdTipoPersona.Name = "cbIdTipoPersona";
+            this.cbIdTipoPersona.Size = new System.Drawing.Size(375, 21);
+            this.cbIdTipoPersona.TabIndex = 12;
+            // 
             // PersonaAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(426, 349);
+            this.ClientSize = new System.Drawing.Size(426, 347);
+            this.Controls.Add(this.cbIdTipoPersona);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.txtIdTipoPersona);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtApellidos);
             this.Controls.Add(this.label2);
@@ -172,10 +174,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtApellidos;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtIdTipoPersona;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cbIdTipoPersona;
     }
 }

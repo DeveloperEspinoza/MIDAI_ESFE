@@ -34,12 +34,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.txtIdTipoPersona = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.Label1 = new System.Windows.Forms.Label();
+            this.cbIdTipoPersona = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,6 +62,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(484, 241);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label4
             // 
@@ -111,22 +112,15 @@
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // txtIdTipoPersona
-            // 
-            this.txtIdTipoPersona.Location = new System.Drawing.Point(549, 209);
-            this.txtIdTipoPersona.Name = "txtIdTipoPersona";
-            this.txtIdTipoPersona.Size = new System.Drawing.Size(317, 20);
-            this.txtIdTipoPersona.TabIndex = 18;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(546, 190);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 16);
+            this.label3.Size = new System.Drawing.Size(96, 16);
             this.label3.TabIndex = 17;
-            this.label3.Text = "Id Tipo Persona:";
+            this.label3.Text = "Tipo Persona:";
             // 
             // txtApellidos
             // 
@@ -162,14 +156,22 @@
             this.Label1.TabIndex = 13;
             this.Label1.Text = "Nombres:";
             // 
+            // cbIdTipoPersona
+            // 
+            this.cbIdTipoPersona.FormattingEnabled = true;
+            this.cbIdTipoPersona.Location = new System.Drawing.Point(549, 209);
+            this.cbIdTipoPersona.Name = "cbIdTipoPersona";
+            this.cbIdTipoPersona.Size = new System.Drawing.Size(317, 21);
+            this.cbIdTipoPersona.TabIndex = 21;
+            // 
             // Persona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(893, 395);
+            this.Controls.Add(this.cbIdTipoPersona);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.txtIdTipoPersona);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtApellidos);
             this.Controls.Add(this.label2);
@@ -198,11 +200,11 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.TextBox txtIdTipoPersona;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtApellidos;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNombres;
         private System.Windows.Forms.Label Label1;
+        private System.Windows.Forms.ComboBox cbIdTipoPersona;
     }
 }

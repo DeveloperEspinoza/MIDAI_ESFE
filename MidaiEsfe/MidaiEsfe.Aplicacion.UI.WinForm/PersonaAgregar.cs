@@ -15,6 +15,20 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         public PersonaAgregar()
         {
             InitializeComponent();
+            //CREE UN METODO PARA OBTNER TODOS LOS TIPOS DE USUARIOS
+            ObtenerTodosLosTiposDePersonas();
+        }
+
+        private void ObtenerTodosLosTiposDePersonas()
+        {
+            // ESTAS LINEAS PUEDE QUEDAR DIRECTO EN EL PersonaAgregar()  PERO MEJOR LO ORDENO EN ESTE METODO
+            List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona> _listaTipoPersona = new List<EntidadesDeNegocio.TipoPersona>();
+            MidaiEsfe.Aplicacion.LogicaDeNegocio.TipoPersonaBL _blTp = new LogicaDeNegocio.TipoPersonaBL();
+            _listaTipoPersona = _blTp.ObtenerTodos();
+
+            cbIdTipoPersona.DataSource = _listaTipoPersona;
+            cbIdTipoPersona.DisplayMember = "Nombre";
+            cbIdTipoPersona.ValueMember = "Id";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -22,7 +36,7 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             //MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona _en = new MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona();
             EntidadesDeNegocio.Persona _entidad = new EntidadesDeNegocio.Persona();
             //solo para modificar o eliminar
-            _entidad.IdTipoPersona = byte.Parse(txtIdTipoPersona.Text);
+            _entidad.IdTipoPersona = byte.Parse(cbIdTipoPersona.SelectedValue.ToString());
             _entidad.Nombres = txtNombres.Text;
             _entidad.Apellidos = txtApellidos.Text;
 
@@ -33,7 +47,6 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             if (resultadoDeMetodo == 1)
             {
                 MessageBox.Show("EL registro fue guardado con exito");
-                txtIdTipoPersona.Text = "";
                 txtNombres.Text = "";
                 txtApellidos.Text = "";
             }
@@ -60,6 +73,11 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         }
 
         private void PersonaAgregar_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
