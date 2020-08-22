@@ -35,11 +35,11 @@
             this.txtFecha = new System.Windows.Forms.DateTimePicker();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.txtIdModulo = new System.Windows.Forms.TextBox();
-            this.txtIdPersona = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.cbIdPersona = new System.Windows.Forms.ComboBox();
+            this.cbIdModulo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,20 +118,6 @@
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // txtIdModulo
-            // 
-            this.txtIdModulo.Location = new System.Drawing.Point(527, 166);
-            this.txtIdModulo.Name = "txtIdModulo";
-            this.txtIdModulo.Size = new System.Drawing.Size(332, 20);
-            this.txtIdModulo.TabIndex = 23;
-            // 
-            // txtIdPersona
-            // 
-            this.txtIdPersona.Location = new System.Drawing.Point(530, 112);
-            this.txtIdPersona.Name = "txtIdPersona";
-            this.txtIdPersona.Size = new System.Drawing.Size(329, 20);
-            this.txtIdPersona.TabIndex = 22;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -162,16 +148,32 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "Id Persona:";
             // 
+            // cbIdPersona
+            // 
+            this.cbIdPersona.FormattingEnabled = true;
+            this.cbIdPersona.Location = new System.Drawing.Point(530, 112);
+            this.cbIdPersona.Name = "cbIdPersona";
+            this.cbIdPersona.Size = new System.Drawing.Size(326, 21);
+            this.cbIdPersona.TabIndex = 27;
+            // 
+            // cbIdModulo
+            // 
+            this.cbIdModulo.FormattingEnabled = true;
+            this.cbIdModulo.Location = new System.Drawing.Point(530, 166);
+            this.cbIdModulo.Name = "cbIdModulo";
+            this.cbIdModulo.Size = new System.Drawing.Size(326, 21);
+            this.cbIdModulo.TabIndex = 28;
+            // 
             // Modulo_y_Estudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(880, 357);
+            this.Controls.Add(this.cbIdModulo);
+            this.Controls.Add(this.cbIdPersona);
             this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.txtIdModulo);
-            this.Controls.Add(this.txtIdPersona);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -199,10 +201,10 @@
         private System.Windows.Forms.DateTimePicker txtFecha;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.TextBox txtIdModulo;
-        private System.Windows.Forms.TextBox txtIdPersona;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbIdPersona;
+        private System.Windows.Forms.ComboBox cbIdModulo;
     }
 }

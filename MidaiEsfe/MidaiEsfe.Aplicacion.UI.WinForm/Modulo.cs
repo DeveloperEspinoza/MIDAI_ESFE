@@ -14,19 +14,43 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
 {
     public partial class Modulo : Form
     {
+        //INTANCIAR BL Y EN
+        List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Modulo> _listaModulo = new List<EntidadesDeNegocio.Modulo>();
+        MidaiEsfe.Aplicacion.LogicaDeNegocio.ModuloBL _blModulo = new ModuloBL();
+
         public Modulo()
         {
             InitializeComponent();
+            limpiadorYDehabilitadordeCampos();
+            ObtenerTodosLasAsignacionesDeModulo();
+        
+         }
+           private void ObtenerTodosLasAsignacionesDeModulo()
+        {
+
+            _listaModulo = _blModulo.ObtenerTodos();
+            //cuando ya tenemos la lista se la setiamos al combox
+            cbIdPersona.DataSource = _listaModulo;
+            cbIdPersona.DisplayMember = "Nombre";
+            cbIdPersona.ValueMember = "Id";
+
+
+        }
+
+        private void limpiadorYDehabilitadordeCampos()
+        {
             // deshabilitamos todo
+            txtNombre.Text = "";
             txtNombre.Enabled = false;
-            txtIdPersona.Enabled = false;
+            cbIdPersona.Enabled = false;
             btnEliminar.Enabled = false;
             btnModificar.Enabled = false;
+
         }
         public MidaiEsfe.Aplicacion.EntidadesDeNegocio.Modulo modeloParaModificar = new EntidadesDeNegocio.Modulo();
 
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnNuevo_Click(object sender, EventArgs e)
         {
             ModuloAgregar Nuevo_Modulo = new ModuloAgregar();
             this.Hide();
@@ -50,33 +74,7 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             dataGridView1.DataSource = lista;
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                //llenamos la entidad
-                modeloParaModificar.Id = Int64.Parse(this.dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
-                modeloParaModificar.IdPersona = Int64.Parse(this.dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString());
-                modeloParaModificar.Nombre = this.dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-
-                //de la entidad le pasamos los datos a las cajas de texto
-                txtNombre.Text = modeloParaModificar.Nombre;
-                txtIdPersona.Text = modeloParaModificar.IdPersona.ToString();
-
-                // habilitamos todo
-                txtNombre.Enabled = true;
-                txtIdPersona.Enabled = true;
-                btnEliminar.Enabled = true;
-                btnModificar.Enabled = true;
-
-            }
-            catch
-            {
-
-            }
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void btnEliminar_Click_1(object sender, EventArgs e)
         {
             MidaiEsfe.Aplicacion.LogicaDeNegocio.ModuloBL _bl = new MidaiEsfe.Aplicacion.LogicaDeNegocio.ModuloBL();
             int respuesta = _bl.Eliminar(modeloParaModificar);
@@ -90,12 +88,7 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
                 dataGridView1.DataSource = lista;
 
                 // deshabilitamos todo
-                txtNombre.Text = "";
-                txtIdPersona.Text = "";
-                txtNombre.Enabled = false;
-                txtIdPersona.Enabled = false;
-                btnEliminar.Enabled = false;
-                btnModificar.Enabled = false;
+                limpiadorYDehabilitadordeCampos();
             }
             else
             {
@@ -103,11 +96,11 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             }
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
+        private void btnModificar_Click_1(object sender, EventArgs e)
         {
             //setiamos a la entidad
             modeloParaModificar.Nombre = txtNombre.Text;
-            modeloParaModificar.IdPersona = Int64.Parse(txtIdPersona.Text);
+            modeloParaModificar.IdPersona = Int64.Parse(cbIdPersona.SelectedValue.ToString());
 
 
             MidaiEsfe.Aplicacion.LogicaDeNegocio.ModuloBL _bl = new MidaiEsfe.Aplicacion.LogicaDeNegocio.ModuloBL();
@@ -122,16 +115,37 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
                 dataGridView1.DataSource = lista;
 
                 // deshabilitamos todo
-                txtNombre.Text = "";
-                txtIdPersona.Text = "";
-                txtNombre.Enabled = false;
-                txtIdPersona.Enabled = false;
-                btnEliminar.Enabled = false;
-                btnModificar.Enabled = false;
+                limpiadorYDehabilitadordeCampos();
             }
             else
             {
                 MessageBox.Show("El registro no fue modificado");
+            }
+        }
+
+        private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                //llenamos la entidad
+                modeloParaModificar.Id = Int64.Parse(this.dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+                modeloParaModificar.IdPersona = Int64.Parse(this.dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString());
+                modeloParaModificar.Nombre = this.dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+
+                //de la entidad le pasamos los datos a las cajas de texto
+                txtNombre.Text = modeloParaModificar.Nombre;
+                cbIdPersona.SelectedValue = modeloParaModificar.IdPersona;
+
+                // habilitamos todo
+                cbIdPersona.Enabled = true;
+                txtNombre.Enabled = true;
+                btnEliminar.Enabled = true;
+                btnModificar.Enabled = true;
+
+            }
+            catch
+            {
+
             }
         }
     }

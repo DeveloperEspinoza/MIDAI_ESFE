@@ -15,14 +15,26 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         public Nueva_Nota()
         {
             InitializeComponent();
+            //CREE UN METODO PARA OBTNER TODOS LOS TIPOS DE USUARIOS
+            ObtenerTodosLosTiposDePersonas();
         }
+        private void ObtenerTodosLosTiposDePersonas()
+        {
+            // ESTAS LINEAS PUEDE QUEDAR DIRECTO EN EL PersonaAgregar()  PERO MEJOR LO ORDENO EN ESTE METODO
+            List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Notas> _listaTipoPersona = new List<EntidadesDeNegocio.Notas>();
+            MidaiEsfe.Aplicacion.LogicaDeNegocio.NotasBL _blTp = new LogicaDeNegocio.NotasBL();
+            _listaTipoPersona = _blTp.ObtenerTodos();
 
+            cbIdEvaluaciones.DataSource = _listaTipoPersona;
+            cbIdEvaluaciones.DisplayMember = "Nombre";
+            cbIdEvaluaciones.ValueMember = "Id";
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             //MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona _en = new MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona();
             EntidadesDeNegocio.Notas _entidad = new EntidadesDeNegocio.Notas();
             //solo para modificar o eliminar
-            _entidad.IdEvaluacion = Int64.Parse(txtIdEvaluaciones.Text);
+            _entidad.IdEvaluacion = byte.Parse(cbIdEvaluaciones.SelectedValue.ToString());
             _entidad.IdAsignacionDeModulo = Int64.Parse(txtIdModuloyEstudiante.Text);
             _entidad.Nota = Int64.Parse(txtNota.Text);
 
@@ -33,7 +45,6 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             if (resultadoDeMetodo == 1)
             {
                 MessageBox.Show("EL registro fue agregado con exito");
-                txtIdEvaluaciones.Text = "";
                 txtIdModuloyEstudiante.Text = "";
                 txtNota.Text = "";
             }
@@ -59,6 +70,11 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         }
 
         private void Nueva_Nota_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

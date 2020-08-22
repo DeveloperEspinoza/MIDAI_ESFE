@@ -12,12 +12,12 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
     {
         public static int Guardar(Asignacion_De_Modulo pAsignacionDeModulo)
         {
-            string consulta = "INSERT INTO ASIGNACION_DE_MODULO (Id_Persona, Id_Modulo, Fecha_Registro) values(@IdPersona, @IdModulo, @FechaRegistro)";
+            string consulta = "INSERT INTO ASIGNACION_DE_MODULO (Id_Persona, Id_Modulo, Fecha_Registro) values(@Id_Persona, @Id_Modulo, @Fecha_Registro)";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
-            comando.Parameters.AddWithValue("@IdPersona", pAsignacionDeModulo.IdPersona);
-            comando.Parameters.AddWithValue("@IdModulo", pAsignacionDeModulo.IdModulo);
-            comando.Parameters.AddWithValue("@FechaRegistro", pAsignacionDeModulo.FechaRegistro);
+            comando.Parameters.AddWithValue("@I_dPersona", pAsignacionDeModulo.IdPersona);
+            comando.Parameters.AddWithValue("@Id_Modulo", pAsignacionDeModulo.IdModulo);
+            comando.Parameters.AddWithValue("@Fecha_Registro", pAsignacionDeModulo.FechaRegistro);
 
             return ComunDB.EjecutarComando(comando);
         }
@@ -62,7 +62,7 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
         }
         public static Asignacion_De_Modulo BuscarPorId(byte pId)
         {
-            string consulta = "SELECT a.Id, a.IdPersona, a.IdModulo, a.FechaRegistro FROM ASIGNACION_DE_MODULO a WHERE Id = @Id";
+            string consulta = "SELECT a.Id, a.Id_Persona, a.Id_Modulo, a.Fecha_Registro FROM ASIGNACION_DE_MODULO a WHERE Id = @Id";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
             comando.Parameters.AddWithValue("@Id", pId);

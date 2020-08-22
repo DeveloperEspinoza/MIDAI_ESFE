@@ -1,6 +1,6 @@
 ﻿namespace MidaiEsfe.Aplicacion.UI.WinForm
 {
-    partial class Notas
+    partial class Nota
     {
         /// <summary>
         /// Required designer variable.
@@ -35,11 +35,11 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.txtNota = new System.Windows.Forms.TextBox();
-            this.txtIdModuloyEstudiante = new System.Windows.Forms.TextBox();
-            this.txtIdEvaluaciones = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.cbIdEvaluaciones = new System.Windows.Forms.ComboBox();
+            this.cbIdModuloyEstudiante = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +52,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Nuevo";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // dataGridView1
             // 
@@ -61,7 +61,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(452, 180);
             this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
             // 
             // label4
             // 
@@ -98,7 +98,7 @@
             this.btnEliminar.TabIndex = 25;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
             // btnModificar
             // 
@@ -109,7 +109,7 @@
             this.btnModificar.TabIndex = 24;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click_1);
             // 
             // txtNota
             // 
@@ -117,20 +117,6 @@
             this.txtNota.Name = "txtNota";
             this.txtNota.Size = new System.Drawing.Size(346, 20);
             this.txtNota.TabIndex = 23;
-            // 
-            // txtIdModuloyEstudiante
-            // 
-            this.txtIdModuloyEstudiante.Location = new System.Drawing.Point(489, 172);
-            this.txtIdModuloyEstudiante.Name = "txtIdModuloyEstudiante";
-            this.txtIdModuloyEstudiante.Size = new System.Drawing.Size(346, 20);
-            this.txtIdModuloyEstudiante.TabIndex = 22;
-            // 
-            // txtIdEvaluaciones
-            // 
-            this.txtIdEvaluaciones.Location = new System.Drawing.Point(489, 101);
-            this.txtIdEvaluaciones.Name = "txtIdEvaluaciones";
-            this.txtIdEvaluaciones.Size = new System.Drawing.Size(346, 20);
-            this.txtIdEvaluaciones.TabIndex = 21;
             // 
             // label3
             // 
@@ -162,16 +148,32 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Id Evaluaciones:";
             // 
-            // Notas
+            // cbIdEvaluaciones
+            // 
+            this.cbIdEvaluaciones.FormattingEnabled = true;
+            this.cbIdEvaluaciones.Location = new System.Drawing.Point(489, 90);
+            this.cbIdEvaluaciones.Name = "cbIdEvaluaciones";
+            this.cbIdEvaluaciones.Size = new System.Drawing.Size(346, 21);
+            this.cbIdEvaluaciones.TabIndex = 26;
+            // 
+            // cbIdModuloyEstudiante
+            // 
+            this.cbIdModuloyEstudiante.FormattingEnabled = true;
+            this.cbIdModuloyEstudiante.Location = new System.Drawing.Point(489, 161);
+            this.cbIdModuloyEstudiante.Name = "cbIdModuloyEstudiante";
+            this.cbIdModuloyEstudiante.Size = new System.Drawing.Size(346, 21);
+            this.cbIdModuloyEstudiante.TabIndex = 27;
+            // 
+            // Nota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(878, 354);
+            this.Controls.Add(this.cbIdModuloyEstudiante);
+            this.Controls.Add(this.cbIdEvaluaciones);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.txtNota);
-            this.Controls.Add(this.txtIdModuloyEstudiante);
-            this.Controls.Add(this.txtIdEvaluaciones);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -179,11 +181,10 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
-            this.Name = "Notas";
+            this.Name = "Nota";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Notas";
-            this.Activated += new System.EventHandler(this.Notas_Activated);
-            this.Load += new System.EventHandler(this.Notas_Load);
+            this.Activated += new System.EventHandler(this.Nota_Activated);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -199,10 +200,10 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.TextBox txtNota;
-        private System.Windows.Forms.TextBox txtIdModuloyEstudiante;
-        private System.Windows.Forms.TextBox txtIdEvaluaciones;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbIdEvaluaciones;
+        private System.Windows.Forms.ComboBox cbIdModuloyEstudiante;
     }
 }

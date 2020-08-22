@@ -163,6 +163,7 @@
             this.cbIdTipoPersona.Name = "cbIdTipoPersona";
             this.cbIdTipoPersona.Size = new System.Drawing.Size(317, 21);
             this.cbIdTipoPersona.TabIndex = 21;
+            this.cbIdTipoPersona.SelectedIndexChanged += new System.EventHandler(this.cbIdTipoPersona_SelectedIndexChanged);
             // 
             // Persona
             // 

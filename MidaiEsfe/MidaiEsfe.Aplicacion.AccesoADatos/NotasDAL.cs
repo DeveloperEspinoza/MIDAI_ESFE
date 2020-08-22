@@ -12,22 +12,22 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
     {
         public static int Guardar(Notas pNotas)
         {
-            string consulta = "INSERT INTO Notas (Id_Evaluaciones, Id_Asignacion_De_Modulo, Nota) values(@Evaluaciones, @IdAsignacionDeModulo, @Nota)";
+            string consulta = "INSERT INTO Notas (Id_Evaluaciones, Id_Asignacion_De_Modulo, Nota) values(@Id_Evaluaciones, @Id_Asignacion_De_Modulo, @Nota)";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
-            comando.Parameters.AddWithValue("@Evaluaciones", pNotas.IdEvaluacion);
-            comando.Parameters.AddWithValue("@IdAsignacionDeModulo", pNotas.IdAsignacionDeModulo);
+            comando.Parameters.AddWithValue("@Id_Evaluaciones", pNotas.IdEvaluacion);
+            comando.Parameters.AddWithValue("@Id_Asignacion_De_Modulo", pNotas.IdAsignacionDeModulo);
             comando.Parameters.AddWithValue("@Nota", pNotas.Nota);
 
             return ComunDB.EjecutarComando(comando);
         }
         public static int Modificar(Notas pNotas)
         {
-            string consulta = "UPDATE Notas SET Id_Evaluaciones=@IdEvaluaciones, Id_Asignacion_De_Modulo=@IdAsignacionDeModulo, Nota=@Nota WHERE Id=@Id";
+            string consulta = "UPDATE Notas SET Id_Evaluaciones=@Id_Evaluaciones, Id_Asignacion_De_Modulo=@Id_Asignacion_De_Modulo, Nota=@Nota WHERE Id=@Id";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
-            comando.Parameters.AddWithValue("@IdEvaluaciones", pNotas.IdEvaluacion);
-            comando.Parameters.AddWithValue("@IdAsignacionDeModulo", pNotas.IdAsignacionDeModulo);
+            comando.Parameters.AddWithValue("@Id_Evaluaciones", pNotas.IdEvaluacion);
+            comando.Parameters.AddWithValue("@Id_Asignacion_De_Modulo", pNotas.IdAsignacionDeModulo);
             comando.Parameters.AddWithValue("@Nota", pNotas.Nota);
             comando.Parameters.AddWithValue("@Id", pNotas.Id);
             return ComunDB.EjecutarComando(comando);

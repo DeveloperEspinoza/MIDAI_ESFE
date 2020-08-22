@@ -36,10 +36,10 @@
             this.txtFecha = new System.Windows.Forms.DateTimePicker();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.txtIdModulo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.cbIdModulo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,13 +125,6 @@
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // txtIdModulo
-            // 
-            this.txtIdModulo.Location = new System.Drawing.Point(521, 88);
-            this.txtIdModulo.Name = "txtIdModulo";
-            this.txtIdModulo.Size = new System.Drawing.Size(276, 20);
-            this.txtIdModulo.TabIndex = 23;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -162,16 +155,24 @@
             this.label1.TabIndex = 20;
             this.label1.Text = "Id Modulo:";
             // 
+            // cbIdModulo
+            // 
+            this.cbIdModulo.FormattingEnabled = true;
+            this.cbIdModulo.Location = new System.Drawing.Point(521, 91);
+            this.cbIdModulo.Name = "cbIdModulo";
+            this.cbIdModulo.Size = new System.Drawing.Size(276, 21);
+            this.cbIdModulo.TabIndex = 28;
+            // 
             // Evaluacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(849, 358);
+            this.Controls.Add(this.cbIdModulo);
             this.Controls.Add(this.txtDetalle);
             this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.txtIdModulo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -200,9 +201,9 @@
         private System.Windows.Forms.DateTimePicker txtFecha;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.TextBox txtIdModulo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbIdModulo;
     }
 }

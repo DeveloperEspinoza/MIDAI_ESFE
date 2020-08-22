@@ -15,14 +15,27 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         public EvaluacionAgregar()
         {
             InitializeComponent();
+            //CREE UN METODO PARA OBTNER TODOS LOS TIPOS DE USUARIOS
+            ObtenerTodasLasEvaluaciones();
         }
 
+        private void ObtenerTodasLasEvaluaciones()
+        {
+            // ESTAS LINEAS PUEDE QUEDAR DIRECTO EN EL PersonaAgregar()  PERO MEJOR LO ORDENO EN ESTE METODO
+            List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Evaluaciones> _listaTipoPersona = new List<EntidadesDeNegocio.Evaluaciones>();
+            MidaiEsfe.Aplicacion.LogicaDeNegocio.EvaluacionesBL _blTp = new LogicaDeNegocio.EvaluacionesBL();
+            _listaTipoPersona = _blTp.ObtenerTodos();
+
+            cbIdModulo.DataSource = _listaTipoPersona;
+            cbIdModulo.DisplayMember = "Nombre";
+            cbIdModulo.ValueMember = "Id";
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             //MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona _en = new MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona();
             EntidadesDeNegocio.Evaluaciones _entidad = new EntidadesDeNegocio.Evaluaciones();
             //solo para modificar o eliminar
-            _entidad.IdModulo = Int64.Parse(txtIdModulo.Text);
+            _entidad.IdModulo = byte.Parse(cbIdModulo.SelectedValue.ToString());
             _entidad.FechaRegistro = DateTime.Parse(dateTimePicker1.Text);
             _entidad.Detalle = txtDetalle.Text;
             LogicaDeNegocio.EvaluacionesBL _logica = new LogicaDeNegocio.EvaluacionesBL();
@@ -32,7 +45,6 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             if (resultadoDeMetodo == 1)
             {
                 MessageBox.Show("EL registro fue agregado con exito");
-                txtIdModulo.Text = "";
                 dateTimePicker1.Text = "";
                 txtDetalle.Text = "";
             }

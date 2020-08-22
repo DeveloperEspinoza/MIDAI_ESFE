@@ -81,5 +81,10 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         {
 
         }
+
+        private void cbIdTipoPersona_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

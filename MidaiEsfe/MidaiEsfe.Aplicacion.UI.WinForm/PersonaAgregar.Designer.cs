@@ -142,6 +142,7 @@
             this.cbIdTipoPersona.Name = "cbIdTipoPersona";
             this.cbIdTipoPersona.Size = new System.Drawing.Size(375, 21);
             this.cbIdTipoPersona.TabIndex = 12;
+            this.cbIdTipoPersona.SelectedIndexChanged += new System.EventHandler(this.cbIdTipoPersona_SelectedIndexChanged);
             // 
             // PersonaAgregar
             // 

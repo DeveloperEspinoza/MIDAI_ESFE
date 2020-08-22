@@ -14,15 +14,44 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
 {
     public partial class Modulo_y_Estudiante : Form
     {
+        //INTANCIAR BL Y EN
+        List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Asignacion_De_Modulo> _listaAsignacionDeModulo = new List<EntidadesDeNegocio.Asignacion_De_Modulo>();
+        MidaiEsfe.Aplicacion.LogicaDeNegocio.AsignacionDeModuloBL _blAsignacionDeModulo = new AsignacionDeModuloBL();
+
         public Modulo_y_Estudiante()
         {
             InitializeComponent();
+            ObtenerTodosLasAsignacionesDeModulo();
+            limpiadorYDehabilitadordeCampos();
+           
+        }
+        private void ObtenerTodosLasAsignacionesDeModulo()
+        {
+
+            _listaAsignacionDeModulo = _blAsignacionDeModulo.ObtenerTodos();
+            //cuando ya tenemos la lista se la setiamos al combox
+            cbIdPersona.DataSource = _listaAsignacionDeModulo;
+            cbIdPersona.DisplayMember = "Nombre";
+            cbIdPersona.ValueMember = "Id";
+
+            //setiamos otro combox
+            cbIdModulo.DataSource = _listaAsignacionDeModulo;
+            cbIdModulo.DisplayMember = "Nombre";
+            cbIdModulo.ValueMember = "Id";
+
+
+        }
+
+        private void limpiadorYDehabilitadordeCampos()
+        {
             // deshabilitamos todo
-            txtIdPersona.Enabled = false;
-            txtIdModulo.Enabled = false;
+            txtFecha.Text = "";
+            cbIdPersona.Enabled = false;
+            cbIdModulo.Enabled = false;
             txtFecha.Enabled = false;
             btnEliminar.Enabled = false;
             btnModificar.Enabled = false;
+
         }
         public MidaiEsfe.Aplicacion.EntidadesDeNegocio.Asignacion_De_Modulo modeloParaModificar = new EntidadesDeNegocio.Asignacion_De_Modulo();
 
@@ -62,13 +91,14 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
                 modeloParaModificar.FechaRegistro = DateTime.Parse(this.dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString());
 
                 //de la entidad le pasamos los datos a las cajas de texto
-                txtIdPersona.Text = modeloParaModificar.IdPersona.ToString();
-                txtIdModulo.Text = modeloParaModificar.IdModulo.ToString();
+                cbIdPersona.SelectedValue = modeloParaModificar.IdPersona;
+                cbIdModulo.SelectedValue = modeloParaModificar.IdModulo;
                 txtFecha.Text = modeloParaModificar.FechaRegistro.ToString();
 
                 // habilitamos todo
-                txtIdPersona.Enabled = true;
-                txtIdModulo.Enabled = true;
+                txtFecha.Text = "";
+                cbIdPersona.Enabled = true;
+                cbIdModulo.Enabled = true;
                 txtFecha.Enabled = true;
                 btnEliminar.Enabled = true;
                 btnModificar.Enabled = true;
@@ -94,14 +124,8 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
                 dataGridView1.DataSource = lista;
 
                 // deshabilitamos todo
-                txtIdPersona.Text = "";
-                txtIdModulo.Text = "";
-                txtFecha.Text = "";
-                txtIdPersona.Enabled = false;
-                txtIdModulo.Enabled = false;
-                txtFecha.Enabled = false;
-                btnEliminar.Enabled = false;
-                btnModificar.Enabled = false;
+                limpiadorYDehabilitadordeCampos();
+
             }
             else
             {
@@ -112,8 +136,8 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         private void btnModificar_Click(object sender, EventArgs e)
         {
             //setiamos a la entidad
-            modeloParaModificar.IdPersona = Int64.Parse(txtIdPersona.Text);
-            modeloParaModificar.IdModulo = Int64.Parse(txtIdModulo.Text);
+            modeloParaModificar.IdPersona = Int64.Parse(cbIdPersona.SelectedValue.ToString());
+            modeloParaModificar.IdModulo = Int64.Parse(cbIdModulo.SelectedValue.ToString());
             modeloParaModificar.FechaRegistro = DateTime.Parse(txtFecha.Text);
 
 
@@ -129,14 +153,8 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
                 dataGridView1.DataSource = lista;
 
                 // deshabilitamos todo
-                txtIdPersona.Text = "";
-                txtIdModulo.Text = "";
-                txtFecha.Text = "";
-                txtIdPersona.Enabled = false;
-                txtIdModulo.Enabled = false;
-                txtFecha.Enabled = false;
-                btnEliminar.Enabled = false;
-                btnModificar.Enabled = false;
+                limpiadorYDehabilitadordeCampos();
+
             }
             else
             {

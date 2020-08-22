@@ -17,6 +17,20 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         public ModulosyEstudiantesAgregar()
         {
             InitializeComponent();
+            //CREE UN METODO PARA OBTNER TODOS LOS TIPOS DE USUARIOS
+            ObtenerTodosLosTiposDePersonas();
+        }
+
+        private void ObtenerTodosLosTiposDePersonas()
+        {
+            // ESTAS LINEAS PUEDE QUEDAR DIRECTO EN EL PersonaAgregar()  PERO MEJOR LO ORDENO EN ESTE METODO
+            List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Asignacion_De_Modulo> _listaTipoPersona = new List<EntidadesDeNegocio.Asignacion_De_Modulo>();
+            MidaiEsfe.Aplicacion.LogicaDeNegocio.AsignacionDeModuloBL _blTp = new LogicaDeNegocio.AsignacionDeModuloBL();
+            _listaTipoPersona = _blTp.ObtenerTodos();
+
+            cbIdPersona.DataSource = _listaTipoPersona;
+            cbIdPersona.DisplayMember = "Nombre";
+            cbIdPersona.ValueMember = "Id";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -24,9 +38,10 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             //MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona _en = new MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona();
             EntidadesDeNegocio.Asignacion_De_Modulo _entidad = new EntidadesDeNegocio.Asignacion_De_Modulo();
             //solo para modificar o eliminar
-            _entidad.IdPersona = Int64.Parse(txtIdPersona.Text);
-            _entidad.IdModulo = Int64.Parse(txtIdModulo.Text);
+            _entidad.IdPersona = Int64.Parse(cbIdPersona.Text);
+            _entidad.IdModulo = Int64.Parse(cbIdModulo.Text);
             _entidad.FechaRegistro = DateTime.Parse(txtFecha.Text);
+
             LogicaDeNegocio.AsignacionDeModuloBL _logica = new LogicaDeNegocio.AsignacionDeModuloBL();
 
             int resultadoDeMetodo = _logica.Guardar(_entidad);
@@ -34,8 +49,6 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             if (resultadoDeMetodo == 1)
             {
                 MessageBox.Show("EL registro fue agregado con exito");
-                txtIdPersona.Text = "";
-                txtIdModulo.Text = "";
                 txtFecha.Text = "";
             }
             else

@@ -30,12 +30,12 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtIdPersona = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.cbIdPersona = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -58,13 +58,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // txtIdPersona
-            // 
-            this.txtIdPersona.Location = new System.Drawing.Point(94, 57);
-            this.txtIdPersona.Name = "txtIdPersona";
-            this.txtIdPersona.Size = new System.Drawing.Size(186, 20);
-            this.txtIdPersona.TabIndex = 2;
             // 
             // txtNombre
             // 
@@ -121,22 +114,31 @@
             this.label6.Text = "Aplicacion de control de notas";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Nuevo_Modulo
+            // cbIdPersona
+            // 
+            this.cbIdPersona.FormattingEnabled = true;
+            this.cbIdPersona.Location = new System.Drawing.Point(94, 58);
+            this.cbIdPersona.Name = "cbIdPersona";
+            this.cbIdPersona.Size = new System.Drawing.Size(186, 21);
+            this.cbIdPersona.TabIndex = 14;
+            // 
+            // ModuloAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(335, 242);
+            this.Controls.Add(this.cbIdPersona);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.txtIdPersona);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Nuevo_Modulo";
+            this.Name = "ModuloAgregar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo_Modulo";
+            this.Load += new System.EventHandler(this.ModuloAgregar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,11 +148,11 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtIdPersona;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cbIdPersona;
     }
 }
