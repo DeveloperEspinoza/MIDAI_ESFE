@@ -44,7 +44,7 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
         }
         public static List<Asignacion_De_Modulo> ObtenerTodos()
         {
-            String consulta = "SELECT TOP 500 a.Id, a.Id_Persona, a.Id_Modulo, a.Fecha_Registro FROM ASIGNACION_DE_MODULO a";
+            String consulta = "SELECT TOP 500 a.Id, a.Id_Persona, a.Id_Modulo, a.Fecha_Registro, m.Nombre, p.nombres, p.apellidos FROM ASIGNACION_DE_MODULO a join modulo m on m.Id=a.Id_Modulo join persona p on p.Id=a.Id_Persona";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
             SqlDataReader reader = ComunDB.EjecutarComandoReader(comando);
@@ -56,6 +56,12 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
                 AsignacionDeModulo.IdPersona = reader.GetInt64(1);
                 AsignacionDeModulo.IdModulo = reader.GetInt64(2);
                 AsignacionDeModulo.FechaRegistro = reader.GetDateTime(3);
+                AsignacionDeModulo.NombreModulo = reader.GetString(4);
+                AsignacionDeModulo.NombrePersona = reader.GetString(5);
+                AsignacionDeModulo.ApellidoPersona = reader.GetString(6);
+
+
+
                 listaAsignacionDeModulo.Add(AsignacionDeModulo);
             }
             return listaAsignacionDeModulo;

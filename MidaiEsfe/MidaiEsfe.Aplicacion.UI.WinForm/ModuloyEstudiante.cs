@@ -18,6 +18,13 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Asignacion_De_Modulo> _listaAsignacionDeModulo = new List<EntidadesDeNegocio.Asignacion_De_Modulo>();
         MidaiEsfe.Aplicacion.LogicaDeNegocio.AsignacionDeModuloBL _blAsignacionDeModulo = new AsignacionDeModuloBL();
 
+        List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Persona> _listaPersonas = new List<EntidadesDeNegocio.Persona>();
+        MidaiEsfe.Aplicacion.LogicaDeNegocio.PersonaBL _blPersonas = new PersonaBL();
+
+        List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Modulo> _listaModulos= new List<EntidadesDeNegocio.Modulo>();
+        MidaiEsfe.Aplicacion.LogicaDeNegocio.ModuloBL _blModulo = new ModuloBL();
+
+
         public Modulo_y_Estudiante()
         {
             InitializeComponent();
@@ -28,14 +35,15 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         private void ObtenerTodosLasAsignacionesDeModulo()
         {
 
-            _listaAsignacionDeModulo = _blAsignacionDeModulo.ObtenerTodos();
+            _listaPersonas = _blPersonas.ObtenerTodos();
             //cuando ya tenemos la lista se la setiamos al combox
-            cbIdPersona.DataSource = _listaAsignacionDeModulo;
-            cbIdPersona.DisplayMember = "Nombre";
+            cbIdPersona.DataSource = _listaPersonas;
+
+            cbIdPersona.DisplayMember = "Nombres";
             cbIdPersona.ValueMember = "Id";
             //setiamos otro combox
-            _listaAsignacionDeModulo = _blAsignacionDeModulo.ObtenerTodos();
-            cbIdModulo.DataSource = _listaAsignacionDeModulo;
+            _listaModulos = _blModulo.ObtenerTodos();
+            cbIdModulo.DataSource = _listaModulos;
             cbIdModulo.DisplayMember = "Nombre";
             cbIdModulo.ValueMember = "Id";
 
@@ -160,6 +168,11 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             {
                 MessageBox.Show("El registro no fue modificado");
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

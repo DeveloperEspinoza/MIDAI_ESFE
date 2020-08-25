@@ -53,7 +53,6 @@ C:\Users\Karla\Developers\GIT\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinFo
 C:\Users\Karla\Developers\GIT\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinForm\obj\Debug\MidaiEsfe.Aplicacion.UI.WinForm.Nueva_Nota.resources
 C:\Users\Luise\Developers\git\.net\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinForm\obj\Debug\MidaiEsfe.Aplicacion.UI.WinForm.Modulo_y_Estudiante.resources
 C:\Users\Luise\Developers\git\.net\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinForm\obj\Debug\MidaiEsfe.Aplicacion.UI.WinForm.Modulo.resources
-C:\Users\Luise\Developers\git\.net\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinForm\obj\Debug\MidaiEsfe.Aplicacion.UI.WinForm.Notas.resources
 C:\Users\Luise\Developers\git\.net\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinForm\obj\Debug\MidaiEsfe.Aplicacion.UI.WinForm.Nueva_Nota.resources
 C:\Users\Luise\Developers\git\.net\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinForm\obj\Debug\MidaiEsfe.Aplicacion.UI.WinForm.Persona.resources
 C:\Users\Luise\Developers\git\.net\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinForm\obj\Debug\MidaiEsfe.Aplicacion.UI.WinForm.PersonaAgregar.resources
@@ -67,3 +66,4 @@ C:\Users\Karla\Developers\GIT\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinFo
 C:\Users\Luise\Developers\git\.net\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinForm\obj\Debug\MidaiEsfe.Aplicacion.UI.WinForm.Evaluacion.resources
 C:\Users\Luise\Developers\git\.net\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinForm\obj\Debug\MidaiEsfe.Aplicacion.UI.WinForm.EvaluacionAgregar.resources
 C:\Users\Karla\Developers\GIT\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinForm\obj\Debug\MidaiEsfe.Aplicacion.UI.WinForm.Nota.resources
+C:\Users\Luise\Developers\git\.net\MIDAI_ESFE\MidaiEsfe\MidaiEsfe.Aplicacion.UI.WinForm\obj\Debug\MidaiEsfe.Aplicacion.UI.WinForm.Nota.resources

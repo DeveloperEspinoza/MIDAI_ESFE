@@ -15,5 +15,10 @@ namespace MidaiEsfe.Aplicacion.EntidadesDeNegocio
         public Int64 IdModulo { get; set; }
 
         public DateTime FechaRegistro { get; set; }
+
+        public string NombrePersona { get; set; }
+
+        public string ApellidoPersona { get; set; }
+        public string NombreModulo { get; set; }
     }
 }
