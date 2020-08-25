@@ -22,11 +22,11 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         private void ObtenerTodasLasEvaluaciones()
         {
             // ESTAS LINEAS PUEDE QUEDAR DIRECTO EN EL PersonaAgregar()  PERO MEJOR LO ORDENO EN ESTE METODO
-            List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Evaluaciones> _listaTipoPersona = new List<EntidadesDeNegocio.Evaluaciones>();
-            MidaiEsfe.Aplicacion.LogicaDeNegocio.EvaluacionesBL _blTp = new LogicaDeNegocio.EvaluacionesBL();
-            _listaTipoPersona = _blTp.ObtenerTodos();
+            List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Evaluaciones> _listaEvaluaciones = new List<EntidadesDeNegocio.Evaluaciones>();
+            MidaiEsfe.Aplicacion.LogicaDeNegocio.EvaluacionesBL _blE = new LogicaDeNegocio.EvaluacionesBL();
 
-            cbIdModulo.DataSource = _listaTipoPersona;
+            _listaEvaluaciones = _blE.ObtenerTodos();
+            cbIdModulo.DataSource = _listaEvaluaciones;
             cbIdModulo.DisplayMember = "Nombre";
             cbIdModulo.ValueMember = "Id";
         }
@@ -35,9 +35,10 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             //MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona _en = new MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona();
             EntidadesDeNegocio.Evaluaciones _entidad = new EntidadesDeNegocio.Evaluaciones();
             //solo para modificar o eliminar
-            _entidad.IdModulo = byte.Parse(cbIdModulo.SelectedValue.ToString());
+            _entidad.IdModulo = Int64.Parse(cbIdModulo.Text);
             _entidad.FechaRegistro = DateTime.Parse(dateTimePicker1.Text);
             _entidad.Detalle = txtDetalle.Text;
+
             LogicaDeNegocio.EvaluacionesBL _logica = new LogicaDeNegocio.EvaluacionesBL();
 
             int resultadoDeMetodo = _logica.Guardar(_entidad);

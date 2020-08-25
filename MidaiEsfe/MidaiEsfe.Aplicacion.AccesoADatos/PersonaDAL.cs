@@ -12,10 +12,10 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
     {
         public static int Guardar(Persona pPersona)
         {
-            string consulta = "INSERT INTO Persona(Id_Tipo_Persona, Nombres, Apellidos) values(@IdTipoPersona, @Nombres, @Apellidos)";
+            string consulta = "INSERT INTO PERSONA(Id_Tipo_Persona, Nombres, Apellidos) values(@Id_Tipo_Persona, @Nombres, @Apellidos)";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
-            comando.Parameters.AddWithValue("@IdTipoPersona", pPersona.IdTipoPersona);
+            comando.Parameters.AddWithValue("@Id_Tipo_Persona", pPersona.IdTipoPersona);
             comando.Parameters.AddWithValue("@Nombres", pPersona.Nombres);
             comando.Parameters.AddWithValue("@Apellidos", pPersona.Apellidos);
             
@@ -24,10 +24,10 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
         }
         public static int Modificar(Persona pPersona)
         {
-            string consulta = "UPDATE Persona SET Id_Tipo_Persona=@IdTipoPersona, Nombres=@Nombres,Apellidos=@Apellidos WHERE Id=@Id";
+            string consulta = "UPDATE PERSONA SET Id_Tipo_Persona=@Id_Tipo_Persona, Nombres=@Nombres,Apellidos=@Apellidos WHERE Id=@Id";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
-            comando.Parameters.AddWithValue("@IdTipoPersona", pPersona.IdTipoPersona);
+            comando.Parameters.AddWithValue("@Id_Tipo_Persona", pPersona.IdTipoPersona);
             comando.Parameters.AddWithValue("@Nombres", pPersona.Nombres);
             comando.Parameters.AddWithValue("@Apellidos", pPersona.Apellidos);
             comando.Parameters.AddWithValue("@Id", pPersona.Id);
@@ -35,7 +35,7 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
         }
         public static int Eliminar(Persona pPersona)
         {
-            string consulta = "DELETE FROM Persona WHERE Id=@Id";
+            string consulta = "DELETE FROM PERSONA WHERE Id=@Id";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
             comando.Parameters.AddWithValue("@Id", pPersona.Id);

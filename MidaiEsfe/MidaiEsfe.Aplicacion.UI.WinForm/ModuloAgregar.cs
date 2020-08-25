@@ -22,12 +22,12 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         private void ObtenerTodosLosTiposDePersonas()
         {
             // ESTAS LINEAS PUEDE QUEDAR DIRECTO EN EL PersonaAgregar()  PERO MEJOR LO ORDENO EN ESTE METODO
-            List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Modulo> _listaTipoPersona = new List<EntidadesDeNegocio.Modulo>();
-            MidaiEsfe.Aplicacion.LogicaDeNegocio.ModuloBL _blTp = new LogicaDeNegocio.ModuloBL();
-            _listaTipoPersona = _blTp.ObtenerTodos();
+            List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Modulo> _listaModulo = new List<EntidadesDeNegocio.Modulo>();
+            MidaiEsfe.Aplicacion.LogicaDeNegocio.ModuloBL _blModulo = new LogicaDeNegocio.ModuloBL();
 
-            cbIdPersona.DataSource = _listaTipoPersona;
-            cbIdPersona.DisplayMember = "Nombre";
+            _listaModulo = _blModulo.ObtenerTodos();
+            cbIdPersona.DataSource = _listaModulo;
+            cbIdPersona.DisplayMember = "Id";
             cbIdPersona.ValueMember = "Id";
         }
 
@@ -41,7 +41,7 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             //MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona _en = new MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona();
             EntidadesDeNegocio.Modulo _entidad = new EntidadesDeNegocio.Modulo();
             //solo para modificar o eliminar
-            _entidad.IdPersona = byte.Parse(cbIdPersona.SelectedValue.ToString());
+            _entidad.IdPersona = Int64.Parse(cbIdPersona.Text);
             _entidad.Nombre = txtNombre.Text;
 
             LogicaDeNegocio.ModuloBL _logica = new LogicaDeNegocio.ModuloBL();

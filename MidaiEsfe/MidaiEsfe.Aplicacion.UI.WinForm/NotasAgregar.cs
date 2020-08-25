@@ -20,22 +20,27 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         }
         private void ObtenerTodosLosTiposDePersonas()
         {
-            // ESTAS LINEAS PUEDE QUEDAR DIRECTO EN EL PersonaAgregar()  PERO MEJOR LO ORDENO EN ESTE METODO
-            List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Notas> _listaTipoPersona = new List<EntidadesDeNegocio.Notas>();
-            MidaiEsfe.Aplicacion.LogicaDeNegocio.NotasBL _blTp = new LogicaDeNegocio.NotasBL();
-            _listaTipoPersona = _blTp.ObtenerTodos();
+            // ESTAS LINEAS PUEDE QUEDAR DIRECTO EN Notas()  PERO MEJOR LO ORDENO EN ESTE METODO
+            List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Notas> _listaNotas = new List<EntidadesDeNegocio.Notas>();
+            MidaiEsfe.Aplicacion.LogicaDeNegocio.NotasBL _blN = new LogicaDeNegocio.NotasBL();
 
-            cbIdEvaluaciones.DataSource = _listaTipoPersona;
+            _listaNotas = _blN.ObtenerTodos();
+            cbIdEvaluaciones.DataSource = _listaNotas;
             cbIdEvaluaciones.DisplayMember = "Nombre";
             cbIdEvaluaciones.ValueMember = "Id";
+
+            _listaNotas = _blN.ObtenerTodos();
+            cbIdModuloYEstudiante.DataSource = _listaNotas;
+            cbIdModuloYEstudiante.DisplayMember = "Nombre";
+            cbIdModuloYEstudiante.ValueMember = "Id";
         }
         private void button1_Click(object sender, EventArgs e)
         {
             //MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona _en = new MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona();
             EntidadesDeNegocio.Notas _entidad = new EntidadesDeNegocio.Notas();
             //solo para modificar o eliminar
-            _entidad.IdEvaluacion = byte.Parse(cbIdEvaluaciones.SelectedValue.ToString());
-            _entidad.IdAsignacionDeModulo = Int64.Parse(txtIdModuloyEstudiante.Text);
+            _entidad.IdEvaluacion = Int64.Parse(cbIdEvaluaciones.SelectedValue.ToString());
+            _entidad.IdAsignacionDeModulo = Int64.Parse(cbIdModuloYEstudiante.SelectedValue.ToString());
             _entidad.Nota = Int64.Parse(txtNota.Text);
 
             LogicaDeNegocio.NotasBL _logica = new LogicaDeNegocio.NotasBL();
@@ -45,7 +50,6 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             if (resultadoDeMetodo == 1)
             {
                 MessageBox.Show("EL registro fue agregado con exito");
-                txtIdModuloyEstudiante.Text = "";
                 txtNota.Text = "";
             }
             else

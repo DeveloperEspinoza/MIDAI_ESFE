@@ -31,7 +31,7 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             _listaModulo = _blModulo.ObtenerTodos();
             //cuando ya tenemos la lista se la setiamos al combox
             cbIdPersona.DataSource = _listaModulo;
-            cbIdPersona.DisplayMember = "Nombre";
+            cbIdPersona.DisplayMember = "Id";
             cbIdPersona.ValueMember = "Id";
 
 

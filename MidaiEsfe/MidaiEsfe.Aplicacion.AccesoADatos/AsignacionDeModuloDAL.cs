@@ -15,7 +15,7 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
             string consulta = "INSERT INTO ASIGNACION_DE_MODULO (Id_Persona, Id_Modulo, Fecha_Registro) values(@Id_Persona, @Id_Modulo, @Fecha_Registro)";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
-            comando.Parameters.AddWithValue("@I_dPersona", pAsignacionDeModulo.IdPersona);
+            comando.Parameters.AddWithValue("@Id_Persona", pAsignacionDeModulo.IdPersona);
             comando.Parameters.AddWithValue("@Id_Modulo", pAsignacionDeModulo.IdModulo);
             comando.Parameters.AddWithValue("@Fecha_Registro", pAsignacionDeModulo.FechaRegistro);
 

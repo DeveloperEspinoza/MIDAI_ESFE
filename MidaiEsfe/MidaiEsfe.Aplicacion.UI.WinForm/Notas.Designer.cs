@@ -155,6 +155,7 @@
             this.cbIdEvaluaciones.Name = "cbIdEvaluaciones";
             this.cbIdEvaluaciones.Size = new System.Drawing.Size(346, 21);
             this.cbIdEvaluaciones.TabIndex = 26;
+            this.cbIdEvaluaciones.SelectedIndexChanged += new System.EventHandler(this.cbIdEvaluaciones_SelectedIndexChanged);
             // 
             // cbIdModuloyEstudiante
             // 

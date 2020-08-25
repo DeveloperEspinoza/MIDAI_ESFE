@@ -31,13 +31,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtIdModuloyEstudiante = new System.Windows.Forms.TextBox();
             this.txtNota = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.cbIdEvaluaciones = new System.Windows.Forms.ComboBox();
+            this.cbIdModuloYEstudiante = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -70,13 +70,6 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Nota:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // txtIdModuloyEstudiante
-            // 
-            this.txtIdModuloyEstudiante.Location = new System.Drawing.Point(15, 139);
-            this.txtIdModuloyEstudiante.Name = "txtIdModuloyEstudiante";
-            this.txtIdModuloyEstudiante.Size = new System.Drawing.Size(256, 20);
-            this.txtIdModuloyEstudiante.TabIndex = 4;
             // 
             // txtNota
             // 
@@ -143,18 +136,26 @@
             this.cbIdEvaluaciones.TabIndex = 15;
             this.cbIdEvaluaciones.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // cbIdModuloYEstudiante
+            // 
+            this.cbIdModuloYEstudiante.FormattingEnabled = true;
+            this.cbIdModuloYEstudiante.Location = new System.Drawing.Point(12, 148);
+            this.cbIdModuloYEstudiante.Name = "cbIdModuloYEstudiante";
+            this.cbIdModuloYEstudiante.Size = new System.Drawing.Size(256, 21);
+            this.cbIdModuloYEstudiante.TabIndex = 16;
+            // 
             // Nueva_Nota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(355, 339);
+            this.Controls.Add(this.cbIdModuloYEstudiante);
             this.Controls.Add(this.cbIdEvaluaciones);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtNota);
-            this.Controls.Add(this.txtIdModuloyEstudiante);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -172,12 +173,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtIdModuloyEstudiante;
         private System.Windows.Forms.TextBox txtNota;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbIdEvaluaciones;
+        private System.Windows.Forms.ComboBox cbIdModuloYEstudiante;
     }
 }

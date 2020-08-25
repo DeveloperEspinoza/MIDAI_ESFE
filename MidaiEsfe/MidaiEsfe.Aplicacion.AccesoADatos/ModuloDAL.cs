@@ -12,20 +12,20 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
     {
         public static int Guardar(Modulo pModulo)
         {
-            string consulta = "INSERT INTO Modulo(Id_Persona, Nombre) values(@IdPersona, @Nombres)";
+            string consulta = "INSERT INTO MODULO(ID_PERSONA, Nombre) values(@Id_Persona, @Nombres)";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
-            comando.Parameters.AddWithValue("@IdPersona", pModulo.IdPersona);
+            comando.Parameters.AddWithValue("@Id_Persona", pModulo.IdPersona);
             comando.Parameters.AddWithValue("@Nombres", pModulo.Nombre);
 
             return ComunDB.EjecutarComando(comando);
         }
         public static int Modificar(Modulo pModulo)
         {
-            string consulta = "UPDATE Modulo SET Id_Persona=@IdPersona, Nombre=@Nombre WHERE Id=@Id";
+            string consulta = "UPDATE Modulo SET ID_PERSONA=@Id_Persona, NOMBRE=@Nombre WHERE Id=@Id";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
-            comando.Parameters.AddWithValue("@IdPersona", pModulo.IdPersona);
+            comando.Parameters.AddWithValue("@Id_Persona", pModulo.IdPersona);
             comando.Parameters.AddWithValue("@Nombre", pModulo.Nombre);
             comando.Parameters.AddWithValue("@Id", pModulo.Id);
             return ComunDB.EjecutarComando(comando);
@@ -57,7 +57,7 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
         }
         public static Modulo BuscarPorId(byte pId)
         {
-            string consulta = "SELECT m.Id, m.IdPersona, m.Nombre FROM Modulo m WHERE Id = @Id";
+            string consulta = "SELECT m.Id, m.Id_Persona, m.Nombre FROM Modulo m WHERE Id = @Id";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
             comando.Parameters.AddWithValue("@Id", pId);

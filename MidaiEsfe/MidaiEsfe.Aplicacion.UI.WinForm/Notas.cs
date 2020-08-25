@@ -36,18 +36,17 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         cbIdEvaluaciones.DataSource = _listaNotas;
         cbIdEvaluaciones.DisplayMember = "Nombre";
         cbIdEvaluaciones.ValueMember = "Id";
-
-            //setiamos otro combox
-            cbIdModuloyEstudiante.DataSource = _listaNotas;
-            cbIdModuloyEstudiante.DisplayMember = "Nombre";
-            cbIdModuloyEstudiante.ValueMember = "Id";
+            //setiamos otro combox        
+         _listaNotas = _blNotas.ObtenerTodos();
+         cbIdModuloyEstudiante.DataSource = _listaNotas;
+         cbIdModuloyEstudiante.DisplayMember = "Nombre";
+         cbIdModuloyEstudiante.ValueMember = "Id";
 
         }
 
         private void limpiadorYDehabilitadordeCampos()
         {
             // deshabilitamos todo
-            txtNota.Text = "";
             cbIdEvaluaciones.Enabled = false;
             cbIdModuloyEstudiante.Enabled = false;
             txtNota.Enabled = false;
@@ -84,7 +83,7 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         private void btnModificar_Click_1(object sender, EventArgs e)
         {
             //setiamos a la entidad
-            modeloParaModificar.IdEvaluacion = Int64.Parse(cbIdEvaluaciones.Text);
+            modeloParaModificar.IdEvaluacion = Int64.Parse(cbIdEvaluaciones.SelectedValue.ToString());
             modeloParaModificar.IdAsignacionDeModulo = Int64.Parse(cbIdModuloyEstudiante.Text);
             modeloParaModificar.Nota = Int64.Parse(txtNota.Text);
 
@@ -166,6 +165,11 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Notas> lista = new List<EntidadesDeNegocio.Notas>();
             lista = _bl.ObtenerTodos();
             dataGridView1.DataSource = lista;
+        }
+
+        private void cbIdEvaluaciones_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

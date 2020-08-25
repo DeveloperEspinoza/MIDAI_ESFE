@@ -33,8 +33,8 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             cbIdPersona.DataSource = _listaAsignacionDeModulo;
             cbIdPersona.DisplayMember = "Nombre";
             cbIdPersona.ValueMember = "Id";
-
             //setiamos otro combox
+            _listaAsignacionDeModulo = _blAsignacionDeModulo.ObtenerTodos();
             cbIdModulo.DataSource = _listaAsignacionDeModulo;
             cbIdModulo.DisplayMember = "Nombre";
             cbIdModulo.ValueMember = "Id";

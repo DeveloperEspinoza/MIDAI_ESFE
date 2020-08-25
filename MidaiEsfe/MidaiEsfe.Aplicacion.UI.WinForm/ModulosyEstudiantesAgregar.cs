@@ -24,13 +24,18 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         private void ObtenerTodosLosTiposDePersonas()
         {
             // ESTAS LINEAS PUEDE QUEDAR DIRECTO EN EL PersonaAgregar()  PERO MEJOR LO ORDENO EN ESTE METODO
-            List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Asignacion_De_Modulo> _listaTipoPersona = new List<EntidadesDeNegocio.Asignacion_De_Modulo>();
-            MidaiEsfe.Aplicacion.LogicaDeNegocio.AsignacionDeModuloBL _blTp = new LogicaDeNegocio.AsignacionDeModuloBL();
-            _listaTipoPersona = _blTp.ObtenerTodos();
+            List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Asignacion_De_Modulo> _listaAsignaciondeModulo = new List<EntidadesDeNegocio.Asignacion_De_Modulo>();
+            MidaiEsfe.Aplicacion.LogicaDeNegocio.AsignacionDeModuloBL _blAM = new LogicaDeNegocio.AsignacionDeModuloBL();
 
-            cbIdPersona.DataSource = _listaTipoPersona;
-            cbIdPersona.DisplayMember = "Nombre";
+            _listaAsignaciondeModulo = _blAM.ObtenerTodos();
+            cbIdPersona.DataSource = _listaAsignaciondeModulo;
+            cbIdPersona.DisplayMember = "Id";
             cbIdPersona.ValueMember = "Id";
+            //setiamos otro 
+            _listaAsignaciondeModulo = _blAM.ObtenerTodos();
+            cbIdModulo.DataSource = _listaAsignaciondeModulo;
+            cbIdModulo.DisplayMember = "Id";
+            cbIdModulo.ValueMember = "Id";
         }
 
         private void button1_Click(object sender, EventArgs e)
