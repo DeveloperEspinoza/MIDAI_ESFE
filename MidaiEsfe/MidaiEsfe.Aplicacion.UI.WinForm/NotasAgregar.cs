@@ -24,15 +24,23 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Notas> _listaNotas = new List<EntidadesDeNegocio.Notas>();
             MidaiEsfe.Aplicacion.LogicaDeNegocio.NotasBL _blN = new LogicaDeNegocio.NotasBL();
 
-            _listaNotas = _blN.ObtenerTodos();
-            cbIdEvaluaciones.DataSource = _listaNotas;
-            cbIdEvaluaciones.DisplayMember = "Nombre";
+            List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Evaluaciones> _listaEvaluaciones = new List<EntidadesDeNegocio.Evaluaciones>();
+            MidaiEsfe.Aplicacion.LogicaDeNegocio.EvaluacionesBL _blE = new LogicaDeNegocio.EvaluacionesBL();
+
+            List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Asignacion_De_Modulo> _listaAsignacion_De_Modulo = new List<EntidadesDeNegocio.Asignacion_De_Modulo>();
+            MidaiEsfe.Aplicacion.LogicaDeNegocio.AsignacionDeModuloBL _blA = new LogicaDeNegocio.AsignacionDeModuloBL();
+
+            _listaEvaluaciones = _blE.ObtenerTodos();
+            cbIdModuloYEstudiante.DataSource = _listaEvaluaciones;
+            cbIdModuloYEstudiante.DisplayMember = "Id";
+            cbIdModuloYEstudiante.ValueMember = "Id";
+
+            _listaAsignacion_De_Modulo = _blA.ObtenerTodos();
+            cbIdEvaluaciones.DataSource = _listaAsignacion_De_Modulo;
+            cbIdEvaluaciones.DisplayMember = "Id";
             cbIdEvaluaciones.ValueMember = "Id";
 
-            _listaNotas = _blN.ObtenerTodos();
-            cbIdModuloYEstudiante.DataSource = _listaNotas;
-            cbIdModuloYEstudiante.DisplayMember = "Nombre";
-            cbIdModuloYEstudiante.ValueMember = "Id";
+           
         }
         private void button1_Click(object sender, EventArgs e)
         {

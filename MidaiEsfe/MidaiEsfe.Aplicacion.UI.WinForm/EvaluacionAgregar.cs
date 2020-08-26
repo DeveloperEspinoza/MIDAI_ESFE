@@ -25,8 +25,11 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Evaluaciones> _listaEvaluaciones = new List<EntidadesDeNegocio.Evaluaciones>();
             MidaiEsfe.Aplicacion.LogicaDeNegocio.EvaluacionesBL _blE = new LogicaDeNegocio.EvaluacionesBL();
 
-            _listaEvaluaciones = _blE.ObtenerTodos();
-            cbIdModulo.DataSource = _listaEvaluaciones;
+            List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Modulo> _listaModulo = new List<EntidadesDeNegocio.Modulo>();
+            MidaiEsfe.Aplicacion.LogicaDeNegocio.ModuloBL _blModulo = new LogicaDeNegocio.ModuloBL();
+
+            _listaModulo = _blModulo.ObtenerTodos();
+            cbIdModulo.DataSource = _listaModulo;
             cbIdModulo.DisplayMember = "Nombre";
             cbIdModulo.ValueMember = "Id";
         }
@@ -35,7 +38,7 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             //MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona _en = new MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona();
             EntidadesDeNegocio.Evaluaciones _entidad = new EntidadesDeNegocio.Evaluaciones();
             //solo para modificar o eliminar
-            _entidad.IdModulo = Int64.Parse(cbIdModulo.Text);
+            _entidad.IdModulo = Int64.Parse(cbIdModulo.SelectedValue.ToString());
             _entidad.FechaRegistro = DateTime.Parse(dateTimePicker1.Text);
             _entidad.Detalle = txtDetalle.Text;
 

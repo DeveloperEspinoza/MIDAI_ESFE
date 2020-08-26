@@ -12,7 +12,7 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
     {
         public static int Guardar(Notas pNotas)
         {
-            string consulta = "INSERT INTO Notas (Id_Evaluaciones, Id_Asignacion_De_Modulo, Nota) values(@Id_Evaluaciones, @Id_Asignacion_De_Modulo, @Nota)";
+            string consulta = "INSERT INTO NOTAS (Id_Evaluaciones, Id_Asignacion_De_Modulo, Nota) values(@Id_Evaluaciones, @Id_Asignacion_De_Modulo, @Nota)";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
             comando.Parameters.AddWithValue("@Id_Evaluaciones", pNotas.IdEvaluacion);

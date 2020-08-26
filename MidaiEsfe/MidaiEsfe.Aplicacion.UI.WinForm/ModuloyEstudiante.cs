@@ -38,7 +38,6 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             _listaPersonas = _blPersonas.ObtenerTodos();
             //cuando ya tenemos la lista se la setiamos al combox
             cbIdPersona.DataSource = _listaPersonas;
-
             cbIdPersona.DisplayMember = "Nombres";
             cbIdPersona.ValueMember = "Id";
             //setiamos otro combox

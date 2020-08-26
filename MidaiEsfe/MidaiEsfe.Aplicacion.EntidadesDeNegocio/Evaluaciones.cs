@@ -15,5 +15,7 @@ namespace MidaiEsfe.Aplicacion.EntidadesDeNegocio
         public DateTime FechaRegistro { get; set; }
 
         public String Detalle { get; set; }
+
+        public String Nombre_Modulo { get; set; }
     }
 }

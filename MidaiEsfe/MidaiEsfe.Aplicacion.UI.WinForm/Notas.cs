@@ -17,10 +17,14 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         //INTANCIAR BL Y EN
         List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Notas> _listaNotas = new List<EntidadesDeNegocio.Notas>();
         MidaiEsfe.Aplicacion.LogicaDeNegocio.NotasBL _blNotas = new NotasBL();
-    
 
+        List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Evaluaciones> _listaEvaluaciones = new List<EntidadesDeNegocio.Evaluaciones>();
+        MidaiEsfe.Aplicacion.LogicaDeNegocio.EvaluacionesBL _blEvaluaciones = new EvaluacionesBL();
 
-    public Nota()
+        List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Asignacion_De_Modulo> _listaAsignacionDeModulo = new List<EntidadesDeNegocio.Asignacion_De_Modulo>();
+        MidaiEsfe.Aplicacion.LogicaDeNegocio.AsignacionDeModuloBL _blA = new AsignacionDeModuloBL();
+
+        public Nota()
         {
             InitializeComponent();
             limpiadorYDehabilitadordeCampos();
@@ -31,14 +35,14 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
 
         private void ObtenerTodasLasNotas()
         {
-        _listaNotas = _blNotas.ObtenerTodos();
+        _listaEvaluaciones = _blEvaluaciones.ObtenerTodos();
         //cuando ya tenemos la lista se la setiamos al combox
-        cbIdEvaluaciones.DataSource = _listaNotas;
+        cbIdEvaluaciones.DataSource = _listaEvaluaciones;
         cbIdEvaluaciones.DisplayMember = "Nombre";
         cbIdEvaluaciones.ValueMember = "Id";
             //setiamos otro combox        
-         _listaNotas = _blNotas.ObtenerTodos();
-         cbIdModuloyEstudiante.DataSource = _listaNotas;
+         _listaAsignacionDeModulo = _blA.ObtenerTodos();
+         cbIdModuloyEstudiante.DataSource = _listaAsignacionDeModulo;
          cbIdModuloyEstudiante.DisplayMember = "Nombre";
          cbIdModuloyEstudiante.ValueMember = "Id";
 
@@ -84,7 +88,7 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         {
             //setiamos a la entidad
             modeloParaModificar.IdEvaluacion = Int64.Parse(cbIdEvaluaciones.SelectedValue.ToString());
-            modeloParaModificar.IdAsignacionDeModulo = Int64.Parse(cbIdModuloyEstudiante.Text);
+            modeloParaModificar.IdAsignacionDeModulo = Int64.Parse(cbIdModuloyEstudiante.SelectedValue.ToString());
             modeloParaModificar.Nota = Int64.Parse(txtNota.Text);
 
 

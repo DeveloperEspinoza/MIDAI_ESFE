@@ -15,8 +15,12 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
     public partial class Evaluacion : Form
     {
         //INTANCIAR BL Y EN
-        List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Evaluaciones> _listaModulo = new List<EntidadesDeNegocio.Evaluaciones>();
-        MidaiEsfe.Aplicacion.LogicaDeNegocio.EvaluacionesBL _blModulo = new EvaluacionesBL();
+        List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Evaluaciones> _listaEvaluaciones = new List<EntidadesDeNegocio.Evaluaciones>();
+        MidaiEsfe.Aplicacion.LogicaDeNegocio.EvaluacionesBL _blE = new EvaluacionesBL();
+
+        //INTANCIAR BL Y EN
+        List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Modulo> _listaModulo = new List<EntidadesDeNegocio.Modulo>();
+        MidaiEsfe.Aplicacion.LogicaDeNegocio.ModuloBL _blModulo = new ModuloBL();
 
         public Evaluacion()
         {
@@ -24,6 +28,7 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             ObtenerTodosLasEvaluaciones();
             limpiadorYDehabilitadordeCampos();
         }
+
         private void ObtenerTodosLasEvaluaciones()
         {
 
@@ -32,6 +37,10 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             cbIdModulo.DataSource = _listaModulo;
             cbIdModulo.DisplayMember = "Nombre";
             cbIdModulo.ValueMember = "Id";
+            // Setiamos otro comboBox
+          
+
+
 
 
         }
@@ -129,7 +138,7 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         private void btnModificar_Click(object sender, EventArgs e)
         {
             //setiamos a la entidad
-            modeloParaModificar.IdModulo = Int64.Parse(cbIdModulo.Text);
+            modeloParaModificar.IdModulo = Int64.Parse(cbIdModulo.SelectedValue.ToString());
             modeloParaModificar.FechaRegistro = DateTime.Parse(txtFecha.Text);
             modeloParaModificar.Detalle = txtDetalle.Text;
 

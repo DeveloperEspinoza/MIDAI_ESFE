@@ -43,7 +43,7 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
         }
         public static List<Evaluaciones> ObtenerTodos()
         {
-            String consulta = "SELECT TOP 500 e.Id, e.Id_Modulo, e.Fecha_Registro, e.Detalle FROM EVALUACIONES e";
+            String consulta = "SELECT TOP 500 e.Id, e.Id_Modulo, e.Fecha_Registro, e.Detalle, m.Nombre FROM EVALUACIONES e join modulo m on m.Id=e.Id_Modulo";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
             SqlDataReader reader = ComunDB.EjecutarComandoReader(comando);
@@ -55,6 +55,7 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
                 Evaluaciones.IdModulo = reader.GetInt64(1);
                 Evaluaciones.FechaRegistro = reader.GetDateTime(2);
                 Evaluaciones.Detalle = reader.GetString(3);
+                Evaluaciones.Nombre_Modulo = reader.GetString(4);
                 listaEvaluaciones.Add(Evaluaciones);
             }
             return listaEvaluaciones;
