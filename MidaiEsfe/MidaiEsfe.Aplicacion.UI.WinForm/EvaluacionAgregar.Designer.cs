@@ -46,9 +46,9 @@
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 59);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 16);
+            this.label1.Size = new System.Drawing.Size(59, 16);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Id Modulo:";
+            this.label1.Text = "Modulo:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
