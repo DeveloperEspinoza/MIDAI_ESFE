@@ -158,7 +158,7 @@
             this.Controls.Add(this.label1);
             this.Name = "EvaluacionAgregar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Nueva_Evaluacion";
+            this.Text = "Agregar_Evaluacion";
             this.ResumeLayout(false);
             this.PerformLayout();
 

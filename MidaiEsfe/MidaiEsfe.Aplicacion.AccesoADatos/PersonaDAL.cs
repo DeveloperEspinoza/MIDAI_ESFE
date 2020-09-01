@@ -55,6 +55,7 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
                 Persona.IdTipoPersona = reader.GetInt64(1);
                 Persona.Nombres = reader.GetString(2);
                 Persona.Apellidos = reader.GetString(3);
+                Persona.NombreTipoPersona = reader.GetString(4);
                 listaPersona.Add(Persona);
             }
             return listaPersona;

@@ -137,7 +137,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ModuloAgregar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Nuevo_Modulo";
+            this.Text = "Agregar_Modulo";
             this.Load += new System.EventHandler(this.ModuloAgregar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

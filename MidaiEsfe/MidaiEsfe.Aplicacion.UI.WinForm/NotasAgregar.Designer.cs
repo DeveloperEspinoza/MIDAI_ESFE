@@ -161,7 +161,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Nueva_Nota";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Nueva_Nota";
+            this.Text = "Nota_Agregar";
             this.Load += new System.EventHandler(this.Nueva_Nota_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -59,7 +59,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(5, 101);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(481, 171);
+            this.dataGridView1.Size = new System.Drawing.Size(575, 174);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -71,7 +71,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(849, 47);
+            this.label4.Size = new System.Drawing.Size(592, 47);
             this.label4.TabIndex = 18;
             this.label4.Text = "Evaluaciones";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -82,23 +82,23 @@
             this.label6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label6.Font = new System.Drawing.Font("Segoe UI Light", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label6.Location = new System.Drawing.Point(0, 311);
+            this.label6.Location = new System.Drawing.Point(0, 520);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(849, 47);
+            this.label6.Size = new System.Drawing.Size(592, 47);
             this.label6.TabIndex = 19;
             this.label6.Text = "Aplicacion de control de notas";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtDetalle
             // 
-            this.txtDetalle.Location = new System.Drawing.Point(521, 227);
+            this.txtDetalle.Location = new System.Drawing.Point(12, 457);
             this.txtDetalle.Name = "txtDetalle";
             this.txtDetalle.Size = new System.Drawing.Size(276, 20);
             this.txtDetalle.TabIndex = 27;
             // 
             // txtFecha
             // 
-            this.txtFecha.Location = new System.Drawing.Point(521, 160);
+            this.txtFecha.Location = new System.Drawing.Point(12, 390);
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.Size = new System.Drawing.Size(276, 20);
             this.txtFecha.TabIndex = 26;
@@ -106,7 +106,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(711, 262);
+            this.btnEliminar.Location = new System.Drawing.Point(202, 492);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(86, 23);
             this.btnEliminar.TabIndex = 25;
@@ -117,7 +117,7 @@
             // btnModificar
             // 
             this.btnModificar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(558, 262);
+            this.btnModificar.Location = new System.Drawing.Point(49, 492);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(87, 23);
             this.btnModificar.TabIndex = 24;
@@ -129,7 +129,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(518, 199);
+            this.label3.Location = new System.Drawing.Point(9, 429);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 16);
             this.label3.TabIndex = 22;
@@ -139,7 +139,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(518, 127);
+            this.label2.Location = new System.Drawing.Point(9, 357);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(127, 16);
             this.label2.TabIndex = 21;
@@ -149,7 +149,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(518, 59);
+            this.label1.Location = new System.Drawing.Point(9, 289);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 16);
             this.label1.TabIndex = 20;
@@ -158,7 +158,7 @@
             // cbIdModulo
             // 
             this.cbIdModulo.FormattingEnabled = true;
-            this.cbIdModulo.Location = new System.Drawing.Point(521, 91);
+            this.cbIdModulo.Location = new System.Drawing.Point(12, 321);
             this.cbIdModulo.Name = "cbIdModulo";
             this.cbIdModulo.Size = new System.Drawing.Size(276, 21);
             this.cbIdModulo.TabIndex = 28;
@@ -167,7 +167,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(849, 358);
+            this.ClientSize = new System.Drawing.Size(592, 567);
             this.Controls.Add(this.cbIdModulo);
             this.Controls.Add(this.txtDetalle);
             this.Controls.Add(this.txtFecha);

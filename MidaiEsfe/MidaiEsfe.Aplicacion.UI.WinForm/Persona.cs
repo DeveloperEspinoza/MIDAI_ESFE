@@ -15,6 +15,9 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
     public partial class Persona : Form
     {
         //INTANCIAR BL Y EN
+        List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Persona> _listaPersona = new List<EntidadesDeNegocio.Persona>();
+        MidaiEsfe.Aplicacion.LogicaDeNegocio.PersonaBL _blPersona = new PersonaBL();
+
         List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona> _listaTipoPersona = new List<EntidadesDeNegocio.TipoPersona>();
         MidaiEsfe.Aplicacion.LogicaDeNegocio.TipoPersonaBL _blTipoPersona = new TipoPersonaBL();
 
@@ -92,7 +95,6 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
                 //de la entidad le pasamos los datos a las cajas de texto
                 txtNombres.Text = modeloParaModificar.Nombres;
                 txtApellidos.Text = modeloParaModificar.Apellidos;
-
                 cbIdTipoPersona.SelectedValue = modeloParaModificar.IdTipoPersona;
            
 

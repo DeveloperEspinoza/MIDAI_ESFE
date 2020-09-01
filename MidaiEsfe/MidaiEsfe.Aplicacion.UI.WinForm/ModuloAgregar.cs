@@ -44,7 +44,7 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             //MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona _en = new MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona();
             EntidadesDeNegocio.Modulo _entidad = new EntidadesDeNegocio.Modulo();
             //solo para modificar o eliminar
-            _entidad.IdPersona = Int64.Parse(cbIdPersona.Text);
+            _entidad.IdPersona = Int64.Parse(cbIdPersona.SelectedValue.ToString());
             _entidad.Nombre = txtNombre.Text;
 
             LogicaDeNegocio.ModuloBL _logica = new LogicaDeNegocio.ModuloBL();

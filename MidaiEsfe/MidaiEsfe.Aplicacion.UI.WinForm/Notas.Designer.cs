@@ -59,7 +59,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 88);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(452, 180);
+            this.dataGridView1.Size = new System.Drawing.Size(1049, 199);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
             // 
@@ -71,7 +71,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(878, 47);
+            this.label4.Size = new System.Drawing.Size(1073, 47);
             this.label4.TabIndex = 15;
             this.label4.Text = "Notas";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -82,9 +82,9 @@
             this.label6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label6.Font = new System.Drawing.Font("Segoe UI Light", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label6.Location = new System.Drawing.Point(0, 307);
+            this.label6.Location = new System.Drawing.Point(0, 523);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(878, 47);
+            this.label6.Size = new System.Drawing.Size(1073, 47);
             this.label6.TabIndex = 17;
             this.label6.Text = "Aplicacion de control de notas";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -92,7 +92,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(745, 271);
+            this.btnEliminar.Location = new System.Drawing.Point(304, 490);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(90, 23);
             this.btnEliminar.TabIndex = 25;
@@ -103,7 +103,7 @@
             // btnModificar
             // 
             this.btnModificar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(578, 271);
+            this.btnModificar.Location = new System.Drawing.Point(137, 490);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(89, 23);
             this.btnModificar.TabIndex = 24;
@@ -113,7 +113,7 @@
             // 
             // txtNota
             // 
-            this.txtNota.Location = new System.Drawing.Point(489, 230);
+            this.txtNota.Location = new System.Drawing.Point(48, 449);
             this.txtNota.Name = "txtNota";
             this.txtNota.Size = new System.Drawing.Size(346, 20);
             this.txtNota.TabIndex = 23;
@@ -122,7 +122,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(486, 211);
+            this.label3.Location = new System.Drawing.Point(45, 430);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 16);
             this.label3.TabIndex = 20;
@@ -132,26 +132,26 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(486, 142);
+            this.label2.Location = new System.Drawing.Point(45, 361);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 16);
+            this.label2.Size = new System.Drawing.Size(78, 16);
             this.label2.TabIndex = 19;
-            this.label2.Text = "Id Modulo y Estudiante:";
+            this.label2.Text = "Estudiante:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(486, 71);
+            this.label1.Location = new System.Drawing.Point(45, 290);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 16);
+            this.label1.Size = new System.Drawing.Size(96, 16);
             this.label1.TabIndex = 18;
-            this.label1.Text = "Id Evaluaciones:";
+            this.label1.Text = "Evaluaciones:";
             // 
             // cbIdEvaluaciones
             // 
             this.cbIdEvaluaciones.FormattingEnabled = true;
-            this.cbIdEvaluaciones.Location = new System.Drawing.Point(489, 90);
+            this.cbIdEvaluaciones.Location = new System.Drawing.Point(48, 309);
             this.cbIdEvaluaciones.Name = "cbIdEvaluaciones";
             this.cbIdEvaluaciones.Size = new System.Drawing.Size(346, 21);
             this.cbIdEvaluaciones.TabIndex = 26;
@@ -160,7 +160,7 @@
             // cbIdModuloyEstudiante
             // 
             this.cbIdModuloyEstudiante.FormattingEnabled = true;
-            this.cbIdModuloyEstudiante.Location = new System.Drawing.Point(489, 161);
+            this.cbIdModuloyEstudiante.Location = new System.Drawing.Point(48, 380);
             this.cbIdModuloyEstudiante.Name = "cbIdModuloyEstudiante";
             this.cbIdModuloyEstudiante.Size = new System.Drawing.Size(346, 21);
             this.cbIdModuloyEstudiante.TabIndex = 27;
@@ -169,7 +169,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(878, 354);
+            this.ClientSize = new System.Drawing.Size(1073, 570);
             this.Controls.Add(this.cbIdModuloyEstudiante);
             this.Controls.Add(this.cbIdEvaluaciones);
             this.Controls.Add(this.btnEliminar);

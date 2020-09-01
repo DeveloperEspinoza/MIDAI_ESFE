@@ -161,7 +161,7 @@
             this.Controls.Add(this.Label1);
             this.Name = "PersonaAgregar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Persona";
+            this.Text = "Persona_Agregar";
             this.Load += new System.EventHandler(this.PersonaAgregar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

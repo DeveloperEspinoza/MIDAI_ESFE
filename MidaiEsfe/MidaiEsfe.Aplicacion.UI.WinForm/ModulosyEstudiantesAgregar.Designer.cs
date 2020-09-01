@@ -160,7 +160,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ModulosyEstudiantesAgregar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Nueva_Asignacion";
+            this.Text = "Agregar_Asignacion";
             this.Load += new System.EventHandler(this.ModulosyEstudiantesAgregar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -59,7 +59,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(21, 86);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(484, 241);
+            this.dataGridView1.Size = new System.Drawing.Size(600, 208);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -72,7 +72,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(893, 47);
+            this.label4.Size = new System.Drawing.Size(633, 47);
             this.label4.TabIndex = 10;
             this.label4.Text = "Personas";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -83,9 +83,9 @@
             this.label6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label6.Font = new System.Drawing.Font("Segoe UI Light", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label6.Location = new System.Drawing.Point(0, 348);
+            this.label6.Location = new System.Drawing.Point(0, 524);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(893, 47);
+            this.label6.Size = new System.Drawing.Size(633, 47);
             this.label6.TabIndex = 12;
             this.label6.Text = "Aplicacion de control de notas";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -93,7 +93,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(770, 252);
+            this.btnEliminar.Location = new System.Drawing.Point(258, 481);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(80, 23);
             this.btnEliminar.TabIndex = 20;
@@ -104,7 +104,7 @@
             // btnModificar
             // 
             this.btnModificar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(549, 252);
+            this.btnModificar.Location = new System.Drawing.Point(21, 481);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(81, 23);
             this.btnModificar.TabIndex = 19;
@@ -116,7 +116,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(546, 190);
+            this.label3.Location = new System.Drawing.Point(18, 419);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 16);
             this.label3.TabIndex = 17;
@@ -124,7 +124,7 @@
             // 
             // txtApellidos
             // 
-            this.txtApellidos.Location = new System.Drawing.Point(549, 154);
+            this.txtApellidos.Location = new System.Drawing.Point(21, 383);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(317, 20);
             this.txtApellidos.TabIndex = 16;
@@ -133,7 +133,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(546, 135);
+            this.label2.Location = new System.Drawing.Point(18, 364);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 16);
             this.label2.TabIndex = 15;
@@ -141,7 +141,7 @@
             // 
             // txtNombres
             // 
-            this.txtNombres.Location = new System.Drawing.Point(549, 100);
+            this.txtNombres.Location = new System.Drawing.Point(21, 329);
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(317, 20);
             this.txtNombres.TabIndex = 14;
@@ -150,7 +150,7 @@
             // 
             this.Label1.AutoSize = true;
             this.Label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.Location = new System.Drawing.Point(546, 81);
+            this.Label1.Location = new System.Drawing.Point(18, 310);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(68, 16);
             this.Label1.TabIndex = 13;
@@ -159,7 +159,7 @@
             // cbIdTipoPersona
             // 
             this.cbIdTipoPersona.FormattingEnabled = true;
-            this.cbIdTipoPersona.Location = new System.Drawing.Point(549, 209);
+            this.cbIdTipoPersona.Location = new System.Drawing.Point(21, 438);
             this.cbIdTipoPersona.Name = "cbIdTipoPersona";
             this.cbIdTipoPersona.Size = new System.Drawing.Size(317, 21);
             this.cbIdTipoPersona.TabIndex = 21;
@@ -169,7 +169,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(893, 395);
+            this.ClientSize = new System.Drawing.Size(633, 571);
             this.Controls.Add(this.cbIdTipoPersona);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
@@ -184,7 +184,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Persona";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Nueva_Persona";
+            this.Text = "Persona";
             this.Activated += new System.EventHandler(this.Persona_Activated);
             this.Load += new System.EventHandler(this.Persona_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
