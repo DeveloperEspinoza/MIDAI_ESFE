@@ -44,7 +44,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 58);
+            this.label1.Location = new System.Drawing.Point(29, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 16);
             this.label1.TabIndex = 0;
@@ -54,7 +54,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 120);
+            this.label2.Location = new System.Drawing.Point(29, 121);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(156, 16);
             this.label2.TabIndex = 1;
@@ -64,7 +64,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 185);
+            this.label3.Location = new System.Drawing.Point(29, 186);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 16);
             this.label3.TabIndex = 2;
@@ -73,7 +73,7 @@
             // 
             // txtNota
             // 
-            this.txtNota.Location = new System.Drawing.Point(15, 204);
+            this.txtNota.Location = new System.Drawing.Point(32, 205);
             this.txtNota.Name = "txtNota";
             this.txtNota.Size = new System.Drawing.Size(256, 20);
             this.txtNota.TabIndex = 5;
@@ -108,7 +108,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(355, 47);
+            this.label4.Size = new System.Drawing.Size(339, 47);
             this.label4.TabIndex = 12;
             this.label4.Text = "Notas";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -122,7 +122,7 @@
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label6.Location = new System.Drawing.Point(0, 292);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(355, 47);
+            this.label6.Size = new System.Drawing.Size(339, 47);
             this.label6.TabIndex = 14;
             this.label6.Text = "Aplicacion de control de notas";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -130,7 +130,7 @@
             // cbIdEvaluaciones
             // 
             this.cbIdEvaluaciones.FormattingEnabled = true;
-            this.cbIdEvaluaciones.Location = new System.Drawing.Point(12, 77);
+            this.cbIdEvaluaciones.Location = new System.Drawing.Point(29, 78);
             this.cbIdEvaluaciones.Name = "cbIdEvaluaciones";
             this.cbIdEvaluaciones.Size = new System.Drawing.Size(256, 21);
             this.cbIdEvaluaciones.TabIndex = 15;
@@ -139,7 +139,7 @@
             // cbIdModuloYEstudiante
             // 
             this.cbIdModuloYEstudiante.FormattingEnabled = true;
-            this.cbIdModuloYEstudiante.Location = new System.Drawing.Point(12, 148);
+            this.cbIdModuloYEstudiante.Location = new System.Drawing.Point(29, 149);
             this.cbIdModuloYEstudiante.Name = "cbIdModuloYEstudiante";
             this.cbIdModuloYEstudiante.Size = new System.Drawing.Size(256, 21);
             this.cbIdModuloYEstudiante.TabIndex = 16;
@@ -148,7 +148,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(355, 339);
+            this.ClientSize = new System.Drawing.Size(339, 339);
             this.Controls.Add(this.cbIdModuloYEstudiante);
             this.Controls.Add(this.cbIdEvaluaciones);
             this.Controls.Add(this.label6);

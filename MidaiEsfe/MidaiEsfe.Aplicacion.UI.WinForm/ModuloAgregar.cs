@@ -25,9 +25,12 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Modulo> _listaModulo = new List<EntidadesDeNegocio.Modulo>();
             MidaiEsfe.Aplicacion.LogicaDeNegocio.ModuloBL _blModulo = new LogicaDeNegocio.ModuloBL();
 
-            _listaModulo = _blModulo.ObtenerTodos();
-            cbIdPersona.DataSource = _listaModulo;
-            cbIdPersona.DisplayMember = "Id";
+            List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Persona> _listaPersona = new List<EntidadesDeNegocio.Persona>();
+            MidaiEsfe.Aplicacion.LogicaDeNegocio.PersonaBL _blPersona = new LogicaDeNegocio.PersonaBL();
+
+            _listaPersona = _blPersona.ObtenerTodos();
+            cbIdPersona.DataSource = _listaPersona;
+            cbIdPersona.DisplayMember = "Nombres";
             cbIdPersona.ValueMember = "Id";
         }
 

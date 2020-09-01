@@ -13,5 +13,7 @@ namespace MidaiEsfe.Aplicacion.EntidadesDeNegocio
         public Int64 IdPersona { get; set; }
 
         public String Nombre { get; set; }
+
+        public String Nombre_Persona { get; set; }
     }
 }

@@ -43,7 +43,33 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
         }
         public static List<Notas> ObtenerTodos()
         {
-            String consulta = "SELECT TOP 500 n.Id, n.Id_Evaluaciones, n.Id_Asignacion_De_Modulo, n.Nota FROM Notas n";
+            String consulta = @"
+                SELECT
+                        TOP 500
+                        n.Id, 
+	                    n.Id_Evaluaciones, 
+	                    n.Id_Asignacion_De_Modulo, 
+	                    n.Nota,
+	                    e.DETALLE AS 'NOMBRE_EXAMEN',
+	                    e.FECHA_REGISTRO,
+	                    m.NOMBRE as 'MODULO',
+	                    p.NOMBRES + p.APELLIDOS as 'PERSONA_CALIFICADORA' ,
+	                    t.NOMBRE as 'TIPO_PERSONA',
+	                    a.FECHA_REGISTRO as 'FECHA_QUE_HIZO_EXAMEN',
+	                    pe.NOMBRES + pe.APELLIDOS as 'PERSONA_CALIFICADA',
+	                    ti.NOMBRE as 'TIPO_PERSONA_QUE_HIZO_EXAMEN'
+                    FROM
+                        Notas n
+                        -- para sacar la informacion de la persona que aplicara el examen
+                        join evaluaciones e on e.ID = n.ID_EVALUACIONES
+                        join MODULO  m on m.ID = e.ID_MODULO
+                        join PERSONA p on p.ID = m.ID_PERSONA
+                        JOIN TIPO_PERSONA t on t.ID = p.ID_TIPO_PERSONA
+                        -- para sacar los datos de la persona que ya hizo el examnen
+                        JOIN ASIGNACION_DE_MODULO a on a.ID = n.ID_ASIGNACION_DE_MODULO
+                        JOIN PERSONA pe on pe.ID = a.ID_PERSONA
+                        JOIN TIPO_PERSONA ti on ti.ID = pe.ID_TIPO_PERSONA
+                ";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
             SqlDataReader reader = ComunDB.EjecutarComandoReader(comando);
@@ -55,6 +81,14 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
                 Notas.IdEvaluacion = reader.GetInt64(1);
                 Notas.IdAsignacionDeModulo = reader.GetInt64(2);
                 Notas.Nota = reader.GetInt32(3);
+                Notas.NombreExamen = reader.GetString(4);
+                Notas.FechaCreacion = Convert.ToString(reader.GetDateTime(5));
+                Notas.NombreModulo = reader.GetString(6);
+                Notas.NombrePersonaCalifadora = reader.GetString(7);
+                Notas.TipoPersonaCalificadora = reader.GetString(8);
+                Notas.FechaHechaExamen = Convert.ToString(reader.GetDateTime(9));
+                Notas.PersonaCalificada = reader.GetString(10);
+                Notas.TipoPersonaCalificada = reader.GetString(11);
                 listaNotas.Add(Notas);
             }
             return listaNotas;

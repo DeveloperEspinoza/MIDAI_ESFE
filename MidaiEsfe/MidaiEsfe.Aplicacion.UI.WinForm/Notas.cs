@@ -22,29 +22,22 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         MidaiEsfe.Aplicacion.LogicaDeNegocio.EvaluacionesBL _blEvaluaciones = new EvaluacionesBL();
 
         List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Asignacion_De_Modulo> _listaAsignacionDeModulo = new List<EntidadesDeNegocio.Asignacion_De_Modulo>();
-        MidaiEsfe.Aplicacion.LogicaDeNegocio.AsignacionDeModuloBL _blA = new AsignacionDeModuloBL();
+        MidaiEsfe.Aplicacion.LogicaDeNegocio.AsignacionDeModuloBL _blAsignacionModulo = new AsignacionDeModuloBL();
 
         public Nota()
         {
             InitializeComponent();
             limpiadorYDehabilitadordeCampos();
-            ObtenerTodasLasNotas();
 
-        }
+            _listaEvaluaciones = _blEvaluaciones.ObtenerTodos();
+            cbIdEvaluaciones.DataSource = _listaEvaluaciones;
+            cbIdEvaluaciones.DisplayMember = "Detalle";
+            cbIdEvaluaciones.ValueMember = "Id";
 
-
-        private void ObtenerTodasLasNotas()
-        {
-        _listaEvaluaciones = _blEvaluaciones.ObtenerTodos();
-        //cuando ya tenemos la lista se la setiamos al combox
-        cbIdEvaluaciones.DataSource = _listaEvaluaciones;
-        cbIdEvaluaciones.DisplayMember = "Nombre";
-        cbIdEvaluaciones.ValueMember = "Id";
-            //setiamos otro combox        
-         _listaAsignacionDeModulo = _blA.ObtenerTodos();
-         cbIdModuloyEstudiante.DataSource = _listaAsignacionDeModulo;
-         cbIdModuloyEstudiante.DisplayMember = "Nombre";
-         cbIdModuloyEstudiante.ValueMember = "Id";
+            _listaAsignacionDeModulo = _blAsignacionModulo.ObtenerTodos();
+            cbIdModuloyEstudiante.DataSource = _listaAsignacionDeModulo;
+            cbIdModuloyEstudiante.DisplayMember = "NombrePersona";
+            cbIdModuloyEstudiante.ValueMember = "Id";
 
         }
 
@@ -57,7 +50,7 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             btnEliminar.Enabled = false;
             btnModificar.Enabled = false;
         }
-
+          
         public MidaiEsfe.Aplicacion.EntidadesDeNegocio.Notas modeloParaModificar = new EntidadesDeNegocio.Notas();
 
         private void button1_Click(object sender, EventArgs e)
@@ -172,6 +165,11 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         }
 
         private void cbIdEvaluaciones_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Nota_Load(object sender, EventArgs e)
         {
 
         }

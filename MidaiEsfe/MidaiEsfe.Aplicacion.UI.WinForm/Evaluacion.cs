@@ -37,7 +37,6 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             cbIdModulo.DataSource = _listaModulo;
             cbIdModulo.DisplayMember = "Nombre";
             cbIdModulo.ValueMember = "Id";
-            // Setiamos otro comboBox
           
 
 

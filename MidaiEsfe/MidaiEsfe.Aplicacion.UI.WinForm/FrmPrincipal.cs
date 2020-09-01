@@ -65,7 +65,7 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         private void tiposDePersonasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TipoPersona tipoPersona = new TipoPersona();
-            this.Hide();
+           // this.Hide();
             tipoPersona.ShowDialog();
             this.Show();
         }
@@ -73,7 +73,7 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         private void personasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Persona Nueva_Persona = new Persona();
-            this.Hide();
+           // this.Hide();
             Nueva_Persona.ShowDialog();
             this.Show();
         }
@@ -86,7 +86,7 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         private void modulosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Modulo Modulo = new Modulo();
-            this.Hide();
+            //this.Hide();
             Modulo.ShowDialog();
             this.Show();
         }
@@ -99,7 +99,7 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         private void registroDeModulosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Modulo_y_Estudiante Modulo_y_Estudiante = new Modulo_y_Estudiante();
-            this.Hide();
+           // this.Hide();
             Modulo_y_Estudiante.ShowDialog();
             this.Show();
         }
@@ -107,7 +107,7 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         private void evaluacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Evaluacion Evaluaciones = new Evaluacion();
-            this.Hide();
+           // this.Hide();
             Evaluaciones.ShowDialog();
             this.Show();
         }
@@ -115,7 +115,7 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         private void cuadroDeNotasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Nota Notas = new Nota();
-            this.Hide();
+           // this.Hide();
             Notas.ShowDialog();
             this.Show();
         }
@@ -123,7 +123,7 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
         private void cuadroDeNotasToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             Nota Notas = new Nota();
-            this.Hide();
+           // this.Hide();
             Notas.ShowDialog();
             this.Show();
         }

@@ -40,7 +40,7 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
         }
         public static List<Modulo> ObtenerTodos()
         {
-            String consulta = "SELECT TOP 500 m.Id, m.ID_PERSONA, m.Nombre FROM Modulo m";
+            String consulta = "SELECT TOP 500 m.Id, m.ID_PERSONA, m.Nombre, p.Nombres as Nombre_Persona FROM Modulo m join Persona p on p.Id= m.ID_PERSONA";
             SqlCommand comando = ComunDB.ObtenerComando();
             comando.CommandText = consulta;
             SqlDataReader reader = ComunDB.EjecutarComandoReader(comando);
@@ -51,6 +51,7 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
                 Modulo.Id = reader.GetInt64(0);
                 Modulo.IdPersona = reader.GetInt64(1);
                 Modulo.Nombre = reader.GetString(2);
+                Modulo.Nombre_Persona = reader.GetString(3);
                 listaModulo.Add(Modulo);
             }
             return listaModulo;

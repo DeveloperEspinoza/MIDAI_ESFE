@@ -12,36 +12,30 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
 {
     public partial class Nueva_Nota : Form
     {
+        // LLAMAR LA FAMILIA DE EVALUACIONES
+        MidaiEsfe.Aplicacion.LogicaDeNegocio.EvaluacionesBL _blEvaluaciones = new LogicaDeNegocio.EvaluacionesBL();
+        List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Evaluaciones> listaEvaluaciones = new List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Evaluaciones>();
+
+        MidaiEsfe.Aplicacion.LogicaDeNegocio.AsignacionDeModuloBL _blAsignacionModulo = new LogicaDeNegocio.AsignacionDeModuloBL();
+        List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Asignacion_De_Modulo> listaDeAsignacionesDeModulo = new List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Asignacion_De_Modulo>();
+
+
         public Nueva_Nota()
         {
             InitializeComponent();
-            //CREE UN METODO PARA OBTNER TODOS LOS TIPOS DE USUARIOS
-            ObtenerTodosLosTiposDePersonas();
-        }
-        private void ObtenerTodosLosTiposDePersonas()
-        {
-            // ESTAS LINEAS PUEDE QUEDAR DIRECTO EN Notas()  PERO MEJOR LO ORDENO EN ESTE METODO
-            List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Notas> _listaNotas = new List<EntidadesDeNegocio.Notas>();
-            MidaiEsfe.Aplicacion.LogicaDeNegocio.NotasBL _blN = new LogicaDeNegocio.NotasBL();
 
-            List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Evaluaciones> _listaEvaluaciones = new List<EntidadesDeNegocio.Evaluaciones>();
-            MidaiEsfe.Aplicacion.LogicaDeNegocio.EvaluacionesBL _blE = new LogicaDeNegocio.EvaluacionesBL();
-
-            List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Asignacion_De_Modulo> _listaAsignacion_De_Modulo = new List<EntidadesDeNegocio.Asignacion_De_Modulo>();
-            MidaiEsfe.Aplicacion.LogicaDeNegocio.AsignacionDeModuloBL _blA = new LogicaDeNegocio.AsignacionDeModuloBL();
-
-            _listaEvaluaciones = _blE.ObtenerTodos();
-            cbIdModuloYEstudiante.DataSource = _listaEvaluaciones;
-            cbIdModuloYEstudiante.DisplayMember = "Id";
-            cbIdModuloYEstudiante.ValueMember = "Id";
-
-            _listaAsignacion_De_Modulo = _blA.ObtenerTodos();
-            cbIdEvaluaciones.DataSource = _listaAsignacion_De_Modulo;
-            cbIdEvaluaciones.DisplayMember = "Id";
+            listaEvaluaciones = _blEvaluaciones.ObtenerTodos();
+            cbIdEvaluaciones.DataSource = listaEvaluaciones;
+            cbIdEvaluaciones.DisplayMember = "Detalle";
             cbIdEvaluaciones.ValueMember = "Id";
 
-           
+            listaDeAsignacionesDeModulo = _blAsignacionModulo.ObtenerTodos();
+            cbIdModuloYEstudiante.DataSource = listaDeAsignacionesDeModulo;
+            cbIdModuloYEstudiante.DisplayMember = "NombrePersona";
+            cbIdModuloYEstudiante.ValueMember = "Id";
+
         }
+       
         private void button1_Click(object sender, EventArgs e)
         {
             //MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona _en = new MidaiEsfe.Aplicacion.EntidadesDeNegocio.TipoPersona();
