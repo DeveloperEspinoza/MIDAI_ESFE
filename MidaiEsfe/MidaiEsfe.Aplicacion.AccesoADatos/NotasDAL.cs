@@ -110,5 +110,50 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
             }
             return Notas;
         }
+
+        public static List<Notas> ObtenerTodosPorIdEvaluacion(Int64 IdEvalaucion)
+        {
+            String consulta = @"
+               SELECT 
+	                N.ID,
+	                N.ID_EVALUACIONES,
+	                N.ID_ASIGNACION_DE_MODULO,
+	                N.NOTA,
+	                E.FECHA_REGISTRO,
+	                E.DETALLE AS EXAMEN,
+	                M.NOMBRE AS MODULO,
+	                PD.NOMBRES+' ' +PD.APELLIDOS AS DOCENTE,
+	                PE.NOMBRES+' ' +PE.APELLIDOS AS ALUMNO
+
+                FROM
+	                NOTAS N JOIN EVALUACIONES E ON E.ID=N.ID_EVALUACIONES JOIN
+	                MODULO M ON M.ID=E.ID_MODULO JOIN
+	                PERSONA PD ON PD.ID=M.ID_PERSONA JOIN
+	                ASIGNACION_DE_MODULO A ON A.ID=N.ID_ASIGNACION_DE_MODULO JOIN
+	                PERSONA PE ON PE.ID=A.ID_PERSONA
+                WHERE 
+	                N.ID_EVALUACIONES=@ID_EVALUACIONES
+                ";
+            SqlCommand comando = ComunDB.ObtenerComando();
+            comando.CommandText = consulta;
+            comando.Parameters.AddWithValue("@ID_EVALUACIONES", IdEvalaucion);
+            SqlDataReader reader = ComunDB.EjecutarComandoReader(comando);
+            List<Notas> listaNotas = new List<Notas>();
+            while (reader.Read())
+            {
+                Notas Notas = new Notas();
+                Notas.Id = reader.GetInt64(0);
+                Notas.IdEvaluacion = reader.GetInt64(1);
+                Notas.IdAsignacionDeModulo = reader.GetInt64(2);
+                Notas.Nota = reader.GetInt32(3);
+                Notas.FechaHechaExamen = Convert.ToString(reader.GetDateTime(4));
+                Notas.NombreExamen = reader.GetString(5);
+                Notas.NombreModulo = reader.GetString(6);
+                Notas.NombrePersonaCalifadora = reader.GetString(7);
+                Notas.PersonaCalificada = reader.GetString(8);
+                listaNotas.Add(Notas);
+            }
+            return listaNotas;
+        }
     }
 }

@@ -43,6 +43,8 @@
             this.cbIdAsignacion.Name = "cbIdAsignacion";
             this.cbIdAsignacion.Size = new System.Drawing.Size(491, 21);
             this.cbIdAsignacion.TabIndex = 0;
+            this.cbIdAsignacion.SelectedIndexChanged += new System.EventHandler(this.cbIdAsignacion_SelectedIndexChanged);
+            this.cbIdAsignacion.SelectionChangeCommitted += new System.EventHandler(this.cbIdAsignacion_SelectionChangeCommitted);
             // 
             // label4
             // 

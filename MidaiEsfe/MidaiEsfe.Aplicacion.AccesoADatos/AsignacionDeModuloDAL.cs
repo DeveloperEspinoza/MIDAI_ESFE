@@ -86,6 +86,7 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
 
         public static List<Asignacion_De_Modulo> ObtenerTodosLosAlumnosPorModulo(Int64 pIdModulo)
         {
+
             String consulta = @"
             select 
 	            a.ID, 

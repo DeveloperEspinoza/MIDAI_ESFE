@@ -30,5 +30,10 @@ namespace MidaiEsfe.Aplicacion.LogicaDeNegocio
         {
             return NotasDAL.BuscarPorId(pId);
         }
+
+        public List<Notas> ObtenerTodosPorIdEvaluacion(Int64 IdEvalaucion)
+        {
+            return NotasDAL.ObtenerTodosPorIdEvaluacion(IdEvalaucion);
+        }
     }
 }

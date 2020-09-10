@@ -47,16 +47,27 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
 
         private void NotaPorModulo_Load(object sender, EventArgs e)
         {
-            MidaiEsfe.Aplicacion.LogicaDeNegocio.NotasBL _Notas = new MidaiEsfe.Aplicacion.LogicaDeNegocio.NotasBL();
-            List<MidaiEsfe.Aplicacion.EntidadesDeNegocio.Notas> listaNotas = new List<EntidadesDeNegocio.Notas>();
-            listaNotas = _Notas.ObtenerTodos();
-            dgvNotasPorModulo.DataSource = listaNotas;
+            
 
         }
 
         private void dgvNotasPorModulo_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
            
+        }
+
+        private void cbIdAsignacion_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            Int64 IdEvaluacion =Convert.ToInt64(cbIdAsignacion.SelectedValue);
+
+            _listaNotas = _blNotas.ObtenerTodosPorIdEvaluacion(IdEvaluacion);
+            dgvNotasPorModulo.DataSource = _listaNotas;
+
+        }
+
+        private void cbIdAsignacion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
