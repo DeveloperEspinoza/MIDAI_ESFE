@@ -52,7 +52,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(706, 47);
+            this.label4.Size = new System.Drawing.Size(1223, 47);
             this.label4.TabIndex = 17;
             this.label4.Text = "Notas por modulo";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -63,9 +63,9 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label2.Font = new System.Drawing.Font("Segoe UI Light", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(0, 354);
+            this.label2.Location = new System.Drawing.Point(0, 359);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(706, 47);
+            this.label2.Size = new System.Drawing.Size(1223, 47);
             this.label2.TabIndex = 18;
             this.label2.Text = "Aplicacion de control de notas";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -86,7 +86,7 @@
             this.dgvNotasPorModulo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNotasPorModulo.Location = new System.Drawing.Point(47, 119);
             this.dgvNotasPorModulo.Name = "dgvNotasPorModulo";
-            this.dgvNotasPorModulo.Size = new System.Drawing.Size(603, 212);
+            this.dgvNotasPorModulo.Size = new System.Drawing.Size(1136, 215);
             this.dgvNotasPorModulo.TabIndex = 20;
             this.dgvNotasPorModulo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNotasPorModulo_CellContentClick);
             // 
@@ -94,7 +94,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(706, 401);
+            this.ClientSize = new System.Drawing.Size(1223, 406);
             this.Controls.Add(this.dgvNotasPorModulo);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
