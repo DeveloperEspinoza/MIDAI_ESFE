@@ -83,5 +83,40 @@ namespace MidaiEsfe.Aplicacion.AccesoADatos
             }
             return AsignacionDeModulo;
         }
+
+        public static List<Asignacion_De_Modulo> ObtenerTodosLosAlumnosPorModulo(Int64 pIdModulo)
+        {
+            String consulta = @"
+            select 
+	            a.ID, 
+	            a.ID_PERSONA, 
+	            a.ID_MODULO, 
+	            a.FECHA_REGISTRO, 
+	            p.NOMBRES+' '+p.APELLIDOS as 'Alumno'
+            from 
+	            ASIGNACION_DE_MODULO a join PERSONA p on p.ID=a.ID_PERSONA
+            where 
+	            ID_MODULO=@ID_MODULO;
+            ";
+            SqlCommand comando = ComunDB.ObtenerComando();
+            comando.CommandText = consulta;
+            comando.Parameters.AddWithValue("@ID_MODULO", pIdModulo);
+            SqlDataReader reader = ComunDB.EjecutarComandoReader(comando);
+            List<Asignacion_De_Modulo> listaAsignacionDeModulo = new List<Asignacion_De_Modulo>();
+            while (reader.Read())
+            {
+                Asignacion_De_Modulo AsignacionDeModulo = new Asignacion_De_Modulo();
+                AsignacionDeModulo.Id = reader.GetInt64(0);
+                AsignacionDeModulo.IdPersona = reader.GetInt64(1);
+                AsignacionDeModulo.IdModulo = reader.GetInt64(2);
+                AsignacionDeModulo.FechaRegistro = reader.GetDateTime(3);
+                AsignacionDeModulo.NombrePersona = reader.GetString(4);
+
+
+
+                listaAsignacionDeModulo.Add(AsignacionDeModulo);
+            }
+            return listaAsignacionDeModulo;
+        }
     }
 }

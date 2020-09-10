@@ -127,5 +127,13 @@ namespace MidaiEsfe.Aplicacion.UI.WinForm
             Notas.ShowDialog();
             this.Show();
         }
+
+        private void calificarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NotaPorModulo Notas = new NotaPorModulo();
+            // this.Hide();
+            Notas.ShowDialog();
+            this.Show();
+        }
     }
 }

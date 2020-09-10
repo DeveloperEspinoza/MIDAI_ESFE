@@ -70,6 +70,18 @@
     <Compile Include="Modulo.Designer.cs">
       <DependentUpon>Modulo.cs</DependentUpon>
     </Compile>
+    <Compile Include="NotaPorModulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotaPorModulo.Designer.cs">
+      <DependentUpon>NotaPorModulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotaPorModuloAgregar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotaPorModuloAgregar.Designer.cs">
+      <DependentUpon>NotaPorModuloAgregar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Notas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +149,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modulo.resx">
       <DependentUpon>Modulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotaPorModulo.resx">
+      <DependentUpon>NotaPorModulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotaPorModuloAgregar.resx">
+      <DependentUpon>NotaPorModuloAgregar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Notas.resx">
       <DependentUpon>Notas.cs</DependentUpon>

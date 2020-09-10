@@ -30,5 +30,9 @@ namespace MidaiEsfe.Aplicacion.LogicaDeNegocio
         {
             return AsignacionDeModuloDAL.BuscarPorId(pId);
         }
+        public List<Asignacion_De_Modulo> ObtenerTodosLosAlumnosPorModulo(Int64 idModulo)
+        {
+            return AsignacionDeModuloDAL.ObtenerTodosLosAlumnosPorModulo(idModulo);
+        }
     }
 }
