@@ -57,9 +57,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(5, 101);
+            this.dataGridView1.Location = new System.Drawing.Point(5, 112);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(575, 174);
+            this.dataGridView1.Size = new System.Drawing.Size(686, 163);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -71,7 +71,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(592, 47);
+            this.label4.Size = new System.Drawing.Size(715, 47);
             this.label4.TabIndex = 18;
             this.label4.Text = "Evaluaciones";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -84,7 +84,7 @@
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label6.Location = new System.Drawing.Point(0, 520);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(592, 47);
+            this.label6.Size = new System.Drawing.Size(715, 47);
             this.label6.TabIndex = 19;
             this.label6.Text = "Aplicacion de control de notas";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -151,9 +151,9 @@
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(9, 289);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 16);
+            this.label1.Size = new System.Drawing.Size(126, 16);
             this.label1.TabIndex = 20;
-            this.label1.Text = "Modulo:";
+            this.label1.Text = "Modulo y Docente:";
             // 
             // cbIdModulo
             // 
@@ -167,7 +167,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 567);
+            this.ClientSize = new System.Drawing.Size(715, 567);
             this.Controls.Add(this.cbIdModulo);
             this.Controls.Add(this.txtDetalle);
             this.Controls.Add(this.txtFecha);
